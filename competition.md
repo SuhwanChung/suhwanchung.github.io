@@ -1,5 +1,9 @@
 # DataMeka Competition
 
+---
+
+## Featured Competition
+
 ### [Singapore Housing Price Prediction](https://datameka.com/competition/9389d2dc-5cfe-41d5-b057-ada6500ebb15)
 
 ---
@@ -49,3 +53,15 @@ By achieving accurate anomaly detection, participants can help improve operation
 
 E-sports transforms online gaming into a spectator sport and is projected to grow to USD 6.75 billion by 2023. 
 In this competition, participants will have the opportunity to leverage a comprehensive dataset from the popular shooter game Counter Strike Global Offensive.
+
+
+## Academic Competitions
+
+### [Electricity Usage Prediction](https://datameka.com/academic/competition/4287910a-89f7-4a2e-8d98-4a35f05abdc2)
+
+---
+> Can we forecast the Electricity usage using AI?
+
+The primary goal of this challenge is to provide participants with an opportunity to gain hands-on experience and familiarity in the field of time-series modeling. 
+Specifically, the challenge revolves around predicting household power consumption using various techniques such as Autoregressive (AR), Autoregressive Integrated Moving Average (ARIMA), 
+Recurrent Neural Networks (RNN), and Long Short-Term Memory (LSTM).

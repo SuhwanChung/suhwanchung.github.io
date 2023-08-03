@@ -1,7 +1,5 @@
 # DataMeka Competition
 
----
-
 ## Featured Competition
 
 ### [Singapore Housing Price Prediction](https://datameka.com/competition/9389d2dc-5cfe-41d5-b057-ada6500ebb15)

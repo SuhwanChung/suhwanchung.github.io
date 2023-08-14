@@ -16,8 +16,7 @@ Build a scalable and production-ready machine learning solution for forecasting 
 - Enhance what-if scenario planning tool and integrate to predictive capability.
 
 ### Machine Learning Workflow Overview
-
-**<Architecture image will be updated and added>**
+[//]: # (**<Architecture image will be updated and added>**)
 
 **Key Components:**
 

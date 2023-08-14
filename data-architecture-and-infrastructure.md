@@ -5,8 +5,7 @@
 New databases and applications will be needed for predictive analytics. Azure LDW and Databrick are two options. Azure LDW allows us to integrate with external data, while Databrick is a subscription service used to run heavy machine learning models. It will provide additional computational resources during the machine learning deployment stage.
 
 ### Sustainable Applications for Predictive Analytics Overview
-
-**<Architecture image will be updated and added>**
+[//]: # (**<Architecture image will be updated and added>**)
 
 **Main Components:**
 

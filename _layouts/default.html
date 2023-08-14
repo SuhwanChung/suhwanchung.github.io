@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ site.lang | default: 'en-US' }}">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
 {% seo %}
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
@@ -12,8 +13,8 @@
     <![endif]-->
   </head>
   <body>
-    <div class="wrapper">
-      <section>
+    <div class="wrapper" style="overflow-y: auto !important">
+      <header>
 <!--        <h1><a href="{{ "/" | absolute_url }}">{{ site.title }}</a></h1>-->
         
         {% if site.logo %}
@@ -68,7 +69,7 @@
 <!--          <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>-->
 <!--        </ul>-->
 <!--        {% endif %}-->
-      </section>
+      </header>
       <section>
 
       {{ content }}

@@ -13,8 +13,8 @@
     <![endif]-->
   </head>
   <body>
-    <div class="wrapper" style="overflow-y: auto !important">
-      <header>
+    <div class="wrapper" style="max-height: 100vh;">
+      <header style="max-height: 100%;">
 <!--        <h1><a href="{{ "/" | absolute_url }}">{{ site.title }}</a></h1>-->
         
         {% if site.logo %}
@@ -48,10 +48,11 @@
           </p>
 
           <br/>
-          <a href="/">Home</a>
+          <a href="/">Home</a><br/>
           <a href="/data-architecture-and-infrastructure">Data Architecture and Infrastructure</a><br/>
           <a href="/machine-learning">Machine Learning</a><br/>
           <a href="/change-management">Change Management</a>
+          <br/><br/>
 
 
 <!--        {% if site.github.is_project_page %}-->

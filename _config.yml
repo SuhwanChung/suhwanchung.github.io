@@ -8,6 +8,7 @@ description: > # your text below (remove <br> elements if you don't need line br
   <br/><br/>
   Quick menu<br/>
   <hr style="border-top: 3px solid #bbb;" /><br/>
+  <a href="/>Home</a><br/>
   <a href="/data-architecture-and-infrastructure">Data Architecture and Infrastructure</a><br/>
   <a href="/machine-learning">Machine Learning</a><br/>
   <a href="/change-management">Change Management</a>

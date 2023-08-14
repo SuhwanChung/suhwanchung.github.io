@@ -1,19 +1,9 @@
 title: DataMeka # your name (or website title) here
-logo: "/images/datameka_logo_colored.png" # your photo (or logo) here
+logo: "/images/nus-research-lab.png" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
-  We are DataMeka<br/>
-  An online space for AI and data enthusiasts<br/>
-  <a href="https://datameka.com/">Visit DataMeka</a><br/>
-  <a href="https://www.linkedin.com/company/datameka/">Visit our LinkedIn Page</a> 
-  <br/><br/>
-  Quick menu<br/>
-  <hr style="border-top: 3px solid #bbb;" /><br/>
-  <a href="/">Home</a><br/>
-  <a href="/data-architecture-and-infrastructure">Data Architecture and Infrastructure</a><br/>
-  <a href="/machine-learning">Machine Learning</a><br/>
-  <a href="/change-management">Change Management</a>
-  
-  
+  Joint Research Labs funded by Nanyang Technological University and Becton Dickinson
+  <br/>
+
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
 - jekyll-remote-theme

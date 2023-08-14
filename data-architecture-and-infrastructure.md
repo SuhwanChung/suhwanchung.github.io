@@ -1,10 +1,10 @@
 ## Data and Machine Learning Architecture Requirements
 
-### Establishing Azure LDW and Databricks to enable Predictive Forecasting
+### <span style="color: #337da8;">Establishing Azure LDW and Databricks to enable Predictive Forecasting</span>
 
 New databases and applications will be needed for predictive analytics. Azure LDW and Databrick are two options. Azure LDW allows us to integrate with external data, while Databrick is a subscription service used to run heavy machine learning models. It will provide additional computational resources during the machine learning deployment stage.
 
-### Sustainable Applications for Predictive Analytics Overview
+### <span style="color: #337da8;">Sustainable Applications for Predictive Analytics Overview</span>
 [//]: # (**<Architecture image will be updated and added>**)
 
 **Main Components:**
@@ -41,7 +41,7 @@ These tools cater to both reporting and self-service needs, making data insights
 
 The architecture emphasizes integration, particularly with planning tools and "What if" tools for scenario analysis.
 
-### Lessons learned and Caveats
+### <span style="color: #337da8;">Lessons learned and Caveats</span>
 
 **Product/SKU Scoping for Automation**
 

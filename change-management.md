@@ -1,12 +1,12 @@
-### Problem Statement for Algorithm-driven Forecasting
+### <span style="color: #337da8;">Problem Statement for Algorithm-driven Forecasting</span>
 
 Today's demand forecasting solutions rely solely on historical trends and do not take into account uncertain market factors. This often results in inaccurate demand forecasting for certain products, leading to excess and/or stockouts.
 
-### Objective for Machine Learning
+### <span style="color: #337da8;">Objective for Machine Learning</span>
 
 Build a scalable and production-ready machine learning solution for forecasting distributor demand. This will lead to improved forecast accuracy and optimized inventory. Utilize various external data points and establish correlations with demand planning.
 
-### Machine Learning Benefits Highlights
+### <span style="color: #337da8;">Machine Learning Benefits Highlights</span>
 
 ![Machine Learning Benefits Highlights](images/plot-ml-benefits-highlights.png)
 
@@ -15,7 +15,7 @@ Build a scalable and production-ready machine learning solution for forecasting 
 - Lower human bias in overall demand forecasting process with a pure data driven approach
 - Enhance what-if scenario planning tool and integrate to predictive capability.
 
-### Machine Learning Workflow Overview
+### <span style="color: #337da8;">Machine Learning Workflow Overview</span>
 [//]: # (**<Architecture image will be updated and added>**)
 
 **Key Components:**
@@ -43,13 +43,13 @@ This clustering is further combined with business inputs.
 
 ![Planning dashboards](images/planning-dashboards.png)
 
-### Descriptions of the Phases of the ML Workflow
+### <span style="color: #337da8;">Descriptions of the Phases of the ML Workflow</span>
 
 1. **Development:** This is the initial phase of the workflow, where the forecasting system is set up and designed. The focus is on creating machine learning framework and planning out key features.
 2. **Iterative Validation & Testing:** This phase is characterized by continuous improvements based on feedback loops. The focus is on making incremental changes to the models, based on user feedback and accuracy, to ensure that the final solution meets the desired specifications.
 3. **Integration & Automation:** This is the final phase of the workflow, where the system is tested and integrated with other tools. The goal is to ensure that the ML system works autonomously and seamlessly integrates with other tools.
 
-### Lessons learned and Caveats
+### <span style="color: #337da8;">Lessons learned and Caveats</span>
 
 **Model Diversity and Automating Model Selection**
 

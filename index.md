@@ -1,29 +1,6 @@
-![Joint Research Labs funded by Nanyang Technological University and Becton Dickinson](images/nus_research_lab.png "Lab Logo")
-
-Joint Research Labs funded by Nanyang Technological University and Becton Dickinson
-
-### Leadership and Team
-
-**Program Lead / PI:** Suhwan Chung (BD), Professor Jagath Rajapakse (NTU)
-
-**Steering Committee (BD):** Min Yuan Seow, Raymond Chow, Paul Holt
-
-**Project Team (BD):** Sally Shen, Justin Lau, Ying Nan, Wan Sian, Gary Chong, Kenneth Lim, Rebecca Neiw, Kavi Lognathan, Meeyee Wong
-
-**Project Team (NTU):** ChungSoo Ahn, Yousheng, Tziyong, Raghav Mantri
-
-**Raymond Chow**
-*(VP/GM, Central Asia)*
-
-BD and NTU have had numerous partnerships wherein most of these, BD has been providing technology eg. flow cytometry for research. For this collaboration, it will be NTU sharing their expertise in machine learning and helping work out a solution for how we can optimally predict and forecast products for manufacture and distribution
-
-***Min Yuan Seow***
-(VP Global Logistics & Distribution)
-“The collaboration will help accelerate BD’s plan to build expertise in-house. It will also expose BD associates to best-in-class of data science research. I look forward to this collaboration to enhance the quality of our sales and operations planning that will greatly enhance BD’s competitiveness.”.
-
 # Program Initiative
 
-### How can we improve forecast accuracy?
+### <span style="color: #337da8;">How can we improve forecast accuracy?</span>
 
 ## Overview
 
@@ -34,13 +11,13 @@ The robust forecasting framework that utilizes state-of-the-art computational in
 
 ## Projects Rolled Out Through This Program
 
-### [1] Sustainable Infrastructure and Architecture for ML Applications
+### <span style="color: #337da8;">[1] Sustainable Infrastructure and Architecture for ML Applications</span>
 
 [Data Architecture and Infrastructure Page](/data-architecture-and-infrastructure)
 
-### [2] Build Scalable Machine Learning for E2E Forecasting
+### <span style="color: #337da8;">[2] Build Scalable Machine Learning for E2E Forecasting</span>
 
 [Machine Learning Page](/machine-learning)
 
-### [3] Driving ML Adoption and Change Management
+### <span style="color: #337da8;">[3] Driving ML Adoption and Change Management</span>
 [Change Management Page](/change-management)

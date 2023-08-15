@@ -9,15 +9,17 @@ We have learned from this crisis to constantly correct and analyze the dynamic c
 
 The robust forecasting framework that utilizes state-of-the-art computational intelligence techniques will unlock the potential technologies to detect risks and opportunities imposed by the new era. This will not only provide private enterprises like BD with greater accuracy in planning production/supplies, delivery, and R&D activities but also lead to generating added intelligence across the global market.
 
+---
+
 ## Projects Rolled Out Through This Program
 
 ### <span style="color: #337da8;">[1] Sustainable Infrastructure and Architecture for ML Applications</span>
 
-[Data Architecture and Infrastructure Page](/data-architecture-and-infrastructure)
+[⚙️Data Architecture and Infrastructure Page](/data-architecture-and-infrastructure)
 
 ### <span style="color: #337da8;">[2] Build Scalable Machine Learning for E2E Forecasting</span>
 
-[Machine Learning Page](/machine-learning)
+[📚Machine Learning Page](/machine-learning)
 
 ### <span style="color: #337da8;">[3] Driving ML Adoption and Change Management</span>
-[Change Management Page](/change-management)
+[📄Change Management Page](/adoption-and-change-management)

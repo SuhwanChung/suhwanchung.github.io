@@ -1,17 +1,9 @@
-.header-wrapper {
-    position: fixed;
-    width: fit-content;
-    height: 100%;
-    overflow-y: auto;
-    position: fixed;
+section {
+    width: 520px;
 }
 
 @media print, screen and (max-width: 960px) {
-    .header-wrapper {
-        position: relative;
-        width: fit-content;
-        height: 100%;
-        overflow-y: auto;
-        position: fixed;
+    section {
+        width: 100%;
     }
 }

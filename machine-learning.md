@@ -18,7 +18,7 @@ Build a scalable and production-ready machine learning solution for forecasting 
 ### <span style="color: #337da8;">Machine Learning Workflow Overview</span>
 [//]: # (**<Architecture image will be updated and added>**)
 
-**Key Components:**
+<span style="color: #337da8;">Key Components:</span>
 
 1. **Input Data Sources**: The workflow integrates diverse data sources:
     - **Internal Data**: Channel data and historical sales, customer orders.
@@ -53,7 +53,7 @@ This clustering is further combined with business inputs.
 
 ### <span style="color: #337da8;">Lessons learned and Caveats</span>
 
-**Model Diversity and Automating Model Selection**
+Model Diversity and Automating Model Selection
 
 Using a combination of machine learning and statistical models enables flexibility and improved forecasting for different product clusters. Automating the forecasting model selection process minimizes forecast errors and ensures that new models are utilized every cycle at their best.
 

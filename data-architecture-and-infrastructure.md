@@ -7,7 +7,7 @@ New databases and applications will be needed for predictive analytics. Azure LD
 ### <span style="color: #337da8;">Sustainable Applications for Predictive Analytics Overview</span>
 [//]: # (**<Architecture image will be updated and added>**)
 
-**Main Components:**
+<span style="color: #337da8;">Main Components:</span>
 
 **Data Sources**
 

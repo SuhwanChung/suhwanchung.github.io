@@ -3,6 +3,7 @@
 ### **Incorporating ML into the core of both upstream and downstream forecasting processes**
 
 Data scientists and predictive forecasting systems developed through the program act as a bridge between raw data and actionable insights. They ensure that each team is able to access accurate, timely, and relevant forecasts to guide their planning process. This is key to driving adoption of machine learning.
+
 [//]: # (**<Image will be added>**)
 
 ### <span style="color: #337da8;">Collaborative Forecasting</span>

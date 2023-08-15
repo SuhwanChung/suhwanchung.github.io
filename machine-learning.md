@@ -27,19 +27,19 @@ Build a scalable and production-ready machine learning solution for forecasting 
 <span style="color: #337da8;">Key Components:</span>
 
 **1. Input Data Sources**: The workflow integrates diverse data sources:
-    - **Internal Data**: Channel data and historical sales, customer orders.
-    - **External Data**: Demographics, healthcare expenditures, NCD & CD from authoritative sources like Government/WHO.
+- **Internal Data**: Channel data and historical sales, customer orders.
+- **External Data**: Demographics, healthcare expenditures, NCD & CD from authoritative sources like Government/WHO.
 **2. SKU/Product Clustering**: Products are clustered based on criteria like:
-    - Volatility (High, Medium, Low)
-    - Top revenue contributors
-    - Product lifecycle
+- Volatility (High, Medium, Low)
+- Top revenue contributors
+- Product lifecycle
 
 This clustering is further combined with business inputs.
 
 **3. M/L Modellings**: The project introduces four distinct pipelines, each tailored for specific data combinations and forecasting models:
-    - **Cluster-based Pipeline**: This pipeline incorporates 10 distinct forecasting models tailored for each cluster’s unique characteristics and focuses on leveraging the hidden patterns (e.g. volatility, seasonality) available in the other series, using the clusters identified in the SKU/Product Clustering phase.
-    - **AutoML Pipeline**: This pipeline leverages automated machine learning to rapidly test and deploy optimal models.
-    - **Deep Learning Pipeline**: Concentrates on using deep neural networks, suitable for complex datasets and non-linear relationships.
+- **Cluster-based Pipeline**: This pipeline incorporates 10 distinct forecasting models tailored for each cluster’s unique characteristics and focuses on leveraging the hidden patterns (e.g. volatility, seasonality) available in the other series, using the clusters identified in the SKU/Product Clustering phase.
+- **AutoML Pipeline**: This pipeline leverages automated machine learning to rapidly test and deploy optimal models.
+- **Deep Learning Pipeline**: Concentrates on using deep neural networks, suitable for complex datasets and non-linear relationships.
 
    ![Deep Learning Pipeline](images/deep-learning-pipeline.png)
 

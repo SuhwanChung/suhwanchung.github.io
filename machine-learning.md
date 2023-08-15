@@ -29,6 +29,7 @@ Build a scalable and production-ready machine learning solution for forecasting 
 **1. Input Data Sources**: The workflow integrates diverse data sources:
 - **Internal Data**: Channel data and historical sales, customer orders.
 - **External Data**: Demographics, healthcare expenditures, NCD & CD from authoritative sources like Government/WHO.
+
 **2. SKU/Product Clustering**: Products are clustered based on criteria like:
 - Volatility (High, Medium, Low)
 - Top revenue contributors

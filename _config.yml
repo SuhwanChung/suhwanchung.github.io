@@ -1,5 +1,5 @@
-title: AI & Data Lab # your name (or website title) here
-logo: "./image/FamilyPhoto.jpeg" # your photo (or logo) here
+title: Suhwan Chung # your name (or website title) here
+logo: "./image/logo.jpeg" # your photo (or logo) here
 description: "Suhwan's AI & Data Lab" # Added quotes to handle special characters
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:

@@ -16,9 +16,9 @@ Welcome to my portfolio. Below are the key projects and models I've worked on. N
 <br/>
 <br/>
 
-
+---
 ## <span id="two-stage-meta-learning-reptile" style="color: #008080;">A scalable meta-learning algorithm for time-series</span>
-
+---
 ![End-to-end Architecture for Reptile implementation](./image/two_stage_reptile_main.png)
 
 In **predictive forecasting**, **high variability** and **small sample sizes** for training models pose significant challenges. To address this issue, I'm excited to introduce a scalable meta-learning algorithm designed for time-series forecasting, inspired by variations of OpenAI's Reptile algorithm. Essentially, we’re training neural networks (FeatureNet) to extract transferable features across different univariate series. The second networks (FineTuneNet) refine final outputs for numeric predictions. The pseudocode is as follows:
@@ -55,9 +55,9 @@ The outcomes from the two-step meta-learning shows an improvement over the bench
 <br/>
 <br/>
 <br/>
-
+---
 ## <span id="datameka-competition" style="color: #008080;">DataMeka: Machine Learning Playground for Southeast Asia</span>
-
+---
 ![DataMeka Organizers, Developers, Volunteers, Participants](./image/datameka-main.png)
 
 During my PhD, I created a **machine learning playground** focused on South Asian issues. Topics included predicting **Singapore housing prices**, analyzing deforestation drivers in Indonesia, and breaking down strategies in Asian e-sports FPS games. Here's resources to key compeititions we hosted.
@@ -98,8 +98,9 @@ During my PhD, I created a **machine learning playground** focused on South Asia
 <br/>
 <br/>
 <br/>
-
+---
 ## <span id="datameka-genai" style="color: #008080;">Generative AI in DataMeka</span>
+---
 ![DataMeka Quiz Platform](./image/datameka-quiz.png)
 At DataMeka, we piloted a Generative AI feature to provide free learning content on our website along with competitions. Think of it as "Hack the Box" for data science and machine learning. We brought this vision to life using Azure OpenAI and extensive prompt engineering experiments to build interactive quizzes for practicing codes for machine learning.
 
@@ -116,8 +117,9 @@ Unfortunately, the platform didn’t make it to a public go-live. The costs of A
 <br/>
 <br/>
 <br/>
-
+---
 ## <span id="bdntu" style="color: #008080;">Transforming Supply Chain Operations with Machine Learning</span>
+---
 ![BD-NTU Research Collaboration Announcement](./image/bdntu-announce.png)
 <!-- <iframe src="./image/bdntu-news.pdf" width="600" height="500" allow="autoplay"></iframe> -->
 Becton Dickinson partnered with Nanyang Technological University to optimize **demand forecasting** and **inventory management** using AI/ML. My role involved leading the project team, overseeing the project, and brining research deliverables into production. 

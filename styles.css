@@ -8,12 +8,6 @@ section {
     }
 }
 
-/* Ensure images inside the section scale responsively */
-section img {
-    width: 100%;
-    height: auto; /* Maintains aspect ratio */
-}
-
 /* Specific styling for the logo image if you want a custom size */
 .logo-image {
     width: 200px; /* Adjust this size as per your requirement */

@@ -144,14 +144,15 @@ The blue line shows the smoothed curve of the forecast accuracy, which shows tha
 <br/>
 
 ### Incorporating Exogenous Variables to Capture Demand Sensing Signals 
-![Time-series feature selection frameworks](./image/bdntu-fs.png)
+![Time-series feature selection frameworks](./image/bdntu-fs-1.png)
 In the medical supply chain, finding demand sensing signals that simulate external environmental factors is critically difficult due to volatile patterns and limited internal data availability. This research aims to improve demand forecasting accuracy by incorporating external variables—specifically Google Trends keywords related to diseases—into forecasting models. The objective is to identify the most relevant keywords using various feature selection methods and use them as predictive signals. 
 
 1. **Implementations**:
    We obtained disease-related keyword trends from Google Trends. To increase the relevance of keywords to the demands for medical products, this research conducted preliminary research to identify which products are used for specific disease treatments. We selected diseases common in Singapore based on published data from the Ministry of Health of Singapore. A few search keyword trends used are:
    ![Time-series feature selection frameworks](./image/bdntu-keyword.png)
 
-   In this study, (1) Pearson’s Correlation (2) Lasso Regression, (3) Recursive Feature Elimination were experimented to measure the linear relationship between each keyword and historical demands to identify strong correlations. 
+   In this study, (1) Pearson’s Correlation (2) Lasso Regression, (3) Recursive Feature Elimination were experimented to measure the linear relationship between each keyword and historical demands to identify strong correlations. Additionally, this research also explore time series characterization to compare the structural behaviors of historical demand patterns and Google search trends:
+   ![Time-series feature selection frameworks](./image/bdntu-compare.png)
 
 2. **Results**:
    The research highlighted **Pearson’s correlation** as the most effective feature selection method, consistently identifying the best keywords for forecasting across multiple series. Also, from forecast accuracy standpoint, Pearson’s method outperformed both Lasso and RFE with Linear Regression and XGBoost. A key takeaway from the study was that the inclusion of external variables, such as Google Trends data, help improve forecast accuracy for most medical products experimented in this research.

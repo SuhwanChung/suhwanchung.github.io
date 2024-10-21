@@ -1,21 +1,26 @@
-# Program Initiative
+<!-- Collar scheme: 
+Black:#002142, Dark Blue: ##1B11E9, Ger: #A7A9AC, Green: #008080 -->
 
-### <span style="color: #337da8;">How can we improve forecast accuracy?</span>
+# <span style="color: #002142;"> Portfolio 🚀
 
-## Overview
+## <span style="color: #1B11E9;"> Research collaboration between Becton Dickinson and Nanyang Technological University 
+Becton Dickinson invested in AI and Machine Learning in 2021 to transform supply chain operations and improve demand visibility during COVID-19. I played a leading role in facilitating this research collaboration between the two parties and managed the end-to-end program as program lead representing Becton Dickinson and PhD student at NTU. The research funding for this program is S$284K, sponsored by the company, with an additional S$550K allocated for internal AI/ML infrastructure setup for Azure DataFactory, DataLake, totaling S$834K for program management. Here's an overview of projects rolled out through this research collaboration program.
 
-The COVID-19 pandemic has resulted in a significant global crisis that disrupted the supply chains. Many companies are exploring new technologies to address challenges associated with demand forecasting as market volatility, complexities, and rising standards in healthcare treatment.
-We have learned from this crisis to constantly correct and analyze the dynamic changes that is affecting the industry, where we need to manage inventory due to sales volatility or to optimally improve production and distribution due to demand surge of products that are directly in high demand during the pandemic. (e.g., vaccination needles, BD Veritor CoV2 diagnostic tests, etc.)
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+### <div style="text-align: center;"><span style="color: #008080;">[1] AI/ML Infrastructure Set up for real-time applications</span></div>
 
-The robust forecasting framework that utilizes state-of-the-art computational intelligence techniques will unlock the potential technologies to detect risks and opportunities imposed by the new era. This will not only provide private enterprises like BD with greater accuracy in planning production/supplies, delivery, and R&D activities but also lead to generating added intelligence across the global market.
 
+<div style="text-align: center;">
+[⚙️ Data Architecture and Infrastructure Page](/data-architecture-and-infrastructure)
+![Infrastructure Image](link-to-image1.jpg)  
+**Objective:** Establish a scalable AI & Data infrastructure for machine learning applications. This project focuses on creating efficient data pipelines and architectural solutions to support large-scale ML models.
+</div>
 ---
 
 ## Projects Rolled Out Through This Program
 
 ### <span style="color: #337da8;">[1] Sustainable Infrastructure and Architecture for ML Applications</span>
 
-[⚙️Data Architecture and Infrastructure Page](/data-architecture-and-infrastructure)
 
 ### <span style="color: #337da8;">[2] Build Scalable Machine Learning for E2E Forecasting</span>
 

@@ -55,6 +55,7 @@ The outcomes from the two-step meta-learning shows an improvement over the bench
 <br/>
 <br/>
 <br/>
+
 ---
 ## <span id="datameka-competition" style="color: #008080;">DataMeka: Machine Learning Playground for Southeast Asia</span>
 ---
@@ -98,6 +99,7 @@ During my PhD, I created a **machine learning playground** focused on South Asia
 <br/>
 <br/>
 <br/>
+
 ---
 ## <span id="datameka-genai" style="color: #008080;">Generative AI in DataMeka</span>
 ---
@@ -117,6 +119,7 @@ Unfortunately, the platform didn’t make it to a public go-live. The costs of A
 <br/>
 <br/>
 <br/>
+
 ---
 ## <span id="bdntu" style="color: #008080;">Transforming Supply Chain Operations with Machine Learning</span>
 ---

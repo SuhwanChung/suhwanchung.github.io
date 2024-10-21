@@ -118,7 +118,7 @@ Unfortunately, the platform didn’t make it to a public go-live. The costs of A
 <br/>
 
 ## <span id="bdntu" style="color: #008080;">Transforming Supply Chain Operations with Machine Learning</span>
-![BD-NTU Research Collaboration Announcement](./image/bd-ntu-announce.png)
+![BD-NTU Research Collaboration Announcement](./image/bdntu-announce.png)
 <!-- <iframe src="./image/bdntu-news.pdf" width="600" height="500" allow="autoplay"></iframe> -->
 Becton Dickinson partnered with Nanyang Technological University to optimize **demand forecasting** and **inventory management** using AI/ML. My role involved leading the project team, overseeing the project, and brining research deliverables into production. 
 

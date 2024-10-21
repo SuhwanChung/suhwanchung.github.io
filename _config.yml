@@ -1,5 +1,5 @@
 title: AI & Data lab # your name (or website title) here
-logo: "./image/FamilyPhoto.jpeg" # your photo (or logo) here
+logo: "/image/FamilyPhoto.jpeg" # your photo (or logo) here
 description: # your text below (remove <br> elements if you don't need line breaks)
   Suhwan's AI & Data Lab: For Smart and Responsible use of AI/ML
   <br/>

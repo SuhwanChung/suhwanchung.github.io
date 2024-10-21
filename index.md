@@ -86,7 +86,7 @@ During my PhD, I created a **machine learning playground** focused on South Asia
 
 - **E-sports x AI:**  
    ![Esports Prediction](./image/datameka-esports.png)  
-   *Counter Strike* is one of the most popular FPS game in Asia. This competition is to propose ideas about player behavior, team dynamics and winning strategies and help improve the user experience using range of algorithms from rule-based to deep learning.
+   *Counter Strike* is one of the most popular FPS game in Asia. This competition is to propose ideas about player behavior, team dynamics and winning strategies and help improve the user experience using range of algorithms from rule-based to deep learning
 
    ![Win/Loss Probability](./image/datameka-esports-gif.gif)
 

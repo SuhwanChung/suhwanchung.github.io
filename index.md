@@ -49,8 +49,9 @@ As an alternative to the last step, we can treat Φ − W as a gradient and plug
 ![MASE across predictions](./image/two_stage_reptile_result.png)
 The outcomes from the two-step meta-learning shows an improvement over the benchmark. We evaluate all predicted outcomes for time-series which is out of sample using a consistent forecast horizon.
 
-*This research paper is currently under review. Once approved, it will be distributed along with code for implementation.*
+*This research paper is currently under review. Once approved, I will share source code and paper.*
 
+<br/>
 <br/>
 <br/>
 <br/>

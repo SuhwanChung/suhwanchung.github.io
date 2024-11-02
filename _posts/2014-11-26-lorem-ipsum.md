@@ -5,6 +5,7 @@ tags: [Image, Color]
 color: turquoise
 excerpt_separator: <!--more-->
 categories: Demo
+hide: true
 ---
 
 ## Lorem Ipsum

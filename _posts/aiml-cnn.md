@@ -1,0 +1,122 @@
+---
+layout: post
+title: Convolution Neural Networks - Quick review
+feature-img: "assets/img/posts/informationTheoryHeader.jpeg"
+thumbnail: "assets/img/posts/informationTheoryHeader.jpeg"
+tags: AI/AML
+categories: PhD Study Note
+---
+
+In a previous post, we reviewed basic architecture of Multi-layer Perceptron (MLP). The MLP has many connections each of which comprise of sets of parameters. Key major tasks of multi-layer perceptron is to determine those parameters for each of the connections from input data. However, the estimation of individual parameters is very tricky task due to MLP’s exhaustive network structures.
+
+The idea behind the Convolutional Neural Networks (CNN) arises from the exhaustiveness of MLP in a way to reduce the total number of parameters using local connections and weight sharing. In this post, we will go over the CNN architecture.
+
+### Intuition: 2-D convolution
+In an images classification, convolutional neural networks (CNN) receive images as an input and use them to train a classifier. The network employs a special mathematical operation called convolution instead of matrix multiplication used by Multi-Layer Perceptron.
+
+In the figure below, CNN first encase the window elements with a small windows, then dot multiplies the small window with the filter element, and finally generates the corresponding value in the output. The three steps will be repeated to derive all of the corresponding output elements.
+
+{% include aligner.html images="posts/aiml-cnn/S1.png" caption="Input image (9 x 9) is also called a perceptive field and the middle layer is a convolutional filter shared across all locations of the perceptive fields. The filter is then mapped out with output known as a feature map." %}
+
+The feature map emphasizes the important features from the input image and will always change depending on filter values. In summary, the convolutional neural networks for the 2-D case is featured by
+
+- Local connection: Destination pixel (-3) in a feature map does not depend on other regions in perceptive field.
+- Weight sharing: Every elements in convolutional filter remains the same as the CNN moves on to the next sequence. Weights are shared across all locations in the input perceptive field.
+
+As we perform the CNN, the size of the feature map will become smaller than the size of the input pixels. So the CNN uses zero padding around the input pixels so as to balance its dimensions with the pixels of output.
+
+### 2-D convolution with multiple channels
+There are many cases of image classification where CNN needs to deal with multiple channels (channel=feature map when kernel=convolutional filter). For instance, natural images with three color channels (Feature maps) – Red, Green, Blue – emphasizes different aspects of the original image. In this case, input to the CNN can be a tensor instead of matric (order-3 tensor as represented x in an image below)
+
+{% include aligner.html images="posts/aiml-cnn/S2.png" caption="2-D convolution with three channels (RGB)" %}
+
+In case of the 3-order tensor, each kernel (filter) is applied onto 3 input channels (RGB) to generate 1 output channel (feature map). This process is repeated for all kernels to generate multiple channels (feature maps), and each of theses channels are then summed to form single output channel. Note that batch size (input size) refers to the number of data points in one forward operation. In the diagram above:
+
+- The size of kernel/filter is K=3 (3 x 3 filter in the diagram)
+- The number of input channels Cin = 3 (RGB)
+- The number of output channels/the number of features/Cout = 64 (given)
+- Total number of parameters = K x K x Cin x Cout = 1,728
+
+MLP would produce a lot more parameters since they don’t have a local connection, so for a 32 x 32 input image, MLP will have input (32 x 32 x 3) x output (32 x 32 x 64).
+
+### Properties of convolution features
+
+##### Size of feature map
+If input image size is n x n and filter size by k x k then the output height and width of the feature map would be (n – k + 1) x (n – k + 1). Note that the number of times we can slide the filter (from the original position) by 1 is n – k, so to make the size constant across layers, we need to use (k -1) row and (k -1) columns of zero-padding.
+
+{% include aligner.html images="posts/aiml-cnn/S3.png" caption="N = 5 when K = 3 in the diagram" %}
+
+##### Padding
+The most common way to apply padding is to use zero-padding by introducing zeros around the feature map. Zero padding is simply to apply zeros around. Mirror padding mirrors the actual values with respect to the border when duplicate padding duplicates the closest values on the border.
+
+{% include aligner.html images="posts/aiml-cnn/S4.png"%}
+
+In duplicate paddings, elements in the matrix are duplicated so the border values are not likely to contribute to much as in other paddings. In zero padding, the whole values of the product within the matrix would be smaller than other paddings due to zero.
+
+##### Stride
+{% include aligner.html images="posts/aiml-cnn/S5.png"%}
+
+Slide is the number of pixels shifts over the input matrix. When the stride is 1 then you move the filter to 1 pixel at a time. The above figure shows convolution would work with a stride of 2.
+
+
+##### Dilation
+Dilation is a technique to inflate the kernel/filter by inserting holes between the kernel elements. When the dilation is 1, then the kernel utilizes adjacent input pixels. When the dilation is 2 then the kernel utilizes 1 pixel apart.
+
+{% include aligner.html images="posts/aiml-cnn/S6.png"%}
+
+All things considered, the size of the feature maps can be calculated with the number of dilation, paddings, and stride using a predefined equation which I won’t review its equation in this post.
+
+##### Perceptive field
+A perceptive field can be defined as the number of pixels from input layer that contributes to 1 value in output layer. For instance, in the diagram below, a shaded pixel in the output is contributed by 3 x 3 pixels of shaded pixels in an input. In other words, it can be said that 1 pixel in the next layer “sees” k x k pixels from the previous layer.
+
+{% include aligner.html images="posts/aiml-cnn/S7.png"%}
+
+In another scenario, we want to compute contributions from input to any one of the pixels in an output (without stride/dilation). In this case, any pixels in k x k output “sees” (2k -1) x (2k -1) pixels from the input.
+
+{% include aligner.html images="posts/aiml-cnn/S8.png" caption="When k=3, our output pixels (any one of six) sees 5 x 5 pixels (2*3-1)*(2*3-1) from the input."%}
+
+Putting everything together, we can see that a pixel at Layer 2 (l +1) “sees” information from (2𝑘−1) × (2𝑘−1) pixels of raw image. This is known as the perceptive field corresponding to the pixel.
+
+{% include aligner.html images="posts/aiml-cnn/S9.png" caption="For a single pixel at convolutional layer l + 2, if the filter size is k x k, the size of perceptive field at layer l-1 is 3k -2"%}
+
+##### Subsampling (down sampling)
+Throughout networks, we can apply sampling techniques to reduce resolution of feature maps to reduce computation and also help each pixels to have a larger perceptive field. Max-pooling technique selects the maximum values with 2 x 2 filters (most common) and stride 2. In most cases, the filter size and the stride are equal.
+
+{% include aligner.html images="posts/aiml-cnn/S10.png" caption="The filter size and the stride are usually equal."%}
+
+Mean-pooling selects the mean values with 2 x 2 filters and stride 2 similar to the max pooling.
+
+{% include aligner.html images="posts/aiml-cnn/S11.png" caption="The filter size and the stride are usually equal."%}
+
+##### ReLu Activation Function
+ReLu activation function is defined by $R(z) = max(0, z)$. It’s a non-linear operation creating many near-zero elements called sparse activation (in contrast to sigmoid function where the values are non-zero but close to 0) which is considered as an useful operation. ReLu also prevent either diminishing or exploding gradient problem when z > 0.
+
+{% include aligner.html images="posts/aiml-cnn/S12.png" caption="ReLu Activation function"%}
+
+##### Skip connection
+In case of deep networks (eg. 50 layers), computing back-propagation is challenging due to an identify mapping. Skip connection can be used instead by helping the gradient flow easier while learning the identity mapping using another batch called a skip connection.
+
+For any reasons that the back-propagation computation gets difficult between two layers of networks, we can use another batch (skip connect) through which the gradient can flow backwards. In this way, skip connection helps gradient flow easier and allows the networks to easily identify.
+
+{% include aligner.html images="posts/aiml-cnn/S13.png" caption="Skip connection make another batch"%}
+
+Mathematically, 3 layers of networks with the first two layers can be represented as α(f2(α(f1(x))). With the skip connection, tensors of x can be added to the outputs of the first two layers α(f2(α(f1(x)) + x). Here, when the first layer performs down-sampling, the size of x and f(x) becomes different. So we can use another down-sampling convolution layer on the skip connection where 1 x 1 kernels with stride 2 followed by batch norm but not activation function.
+
+{% include aligner.html images="posts/aiml-cnn/S14.png"%}
+
+
+##### Normalization - Data whitening
+Image normalization can be done by channels so that each channel is expected to have zero means and unit standard deviation (sd = 1). The unit standard deviation is made to balance the contribution of each channel to the output.
+
+For instance, if one channel has large values, the multiplication to the channel results in higher contribution than other channels in networks. By making the unit standard deviation (normalization), the networks balance the contribution of each channels.
+
+{% include aligner.html images="posts/aiml-cnn/S15.png" caption="Input normalization for input $X = [X_R, X_G, X_B)$"%}
+
+
+##### Batch normalization
+Deep neural networks (eg. 50, 100, etc), the internal features lack any normalization which could make training process challenging. The concept of batch normalization is to use the mini-batch statistics in place of the whole-dataset statistics. Therefore, during training process, the batch-wise mean and standard deviation is used in the calculation.
+
+{% include aligner.html images="posts/aiml-cnn/S16.png"%}
+
+During training, the batch wise mean and standard deviation is used in the calculation. During inference (testing), we would like to compute dataset wise statistics, but that’s too expensive, alternatively, we usually use a running mean and a running variance. In PyTorch, such training/inference behavior change is controlled by `model.eval`.
+

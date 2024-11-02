@@ -1,0 +1,89 @@
+---
+layout: post
+title: Fundamentals of Multi-layer Perceptron
+feature-img: "assets/img/posts/informationTheoryHeader.jpeg"
+thumbnail: "assets/img/posts/informationTheoryHeader.jpeg"
+tags: [AI/AML]
+categories: PhD Study Note
+---
+
+We all know that machine (deep) learning is used for predictive learning. We observe data drawn from distributions and predict aspects of this distribution for predictive problems. However, the goal of representation learning isn’t predicting observables, but to learn something about the underlying structure.
+
+In deep learning, learning for representation allows a model to discover the representations needed for feature detection or classification from raw data. This replaces manual feature engineering and allows learning algorithms to both learn the features and use them to perform a specific tasks.
+
+Multi-Layer Perceptron (MLP) is known as powerful algorithm for representation learning by learning complicated relationships from raw data. In this posts, we will review key components of MLP.
+
+
+### MLP: Intuition
+Multi-layer Perceptron is basically overlaying logistic regression units: hidden units (h) are considered as separate logistic regression unit (composing of vectors or matrix) of which activation functions such as sigmoid are applied to each of the hidden units. Output nodes (output layer), are also another logistic regression component and have three dimensional inputs vectors becomes the final output of the network in the diagram below.
+
+{% include aligner.html images="posts/aiml-mlp/S1.png"%}
+
+##### Mathematical intuition
+The first neuron in the first layer drawn from the MLP architecture (figure above) can be represented mathematically as 
+$ Z_{1,1} = \sigma(\beta_{1,1}^T X) $ where σ is sigmoid activation function and βT is parameter vectors. This equation is equal to linear regression (inner product between parameters β and input x without additional sigmoid activation function).
+
+The second neuron in the first layer on the other hand is represented mathematically as $Z_{1,2} = \sigma(\beta_{1,2}^T X)$. Putting the first and second neurons in the first layer together in matrix form becomes:
+
+$$
+\mathbf{z}_1 = \begin{pmatrix} z_{1,1} \\ z_{1,2} \end{pmatrix} = \sigma \left( \begin{pmatrix} \beta_{1,1} \\ \beta_{1,2} \end{pmatrix} x \right) = \sigma(W_1 x)
+$$
+
+Further extension to L hidden layers, $f(\mathbf{X}) = \sigma\left(\mathbf{W}_L \dots \sigma\left(\mathbf{W}_2 \sigma\left(\mathbf{W}_1 \mathbf{X}\right)\right)\right)$ where W is arbitrary size of parameter matrix.
+
+##### Activation functions
+
+Activation functions are used to limit outputs of each layers from vectors of input arrays. When a sigmoid activation function squashes any real numbers (-inf, +inf) to finite range between (0, 1), a hyperbolic tangent squashes any real numbers between (-1 and 1).
+
+Both sigmoid and hyperbolic tangent activation functions are used for binary classifications where the possible outcomes are two classes, such as positive and negative. In multi-class classification where the outcomes can take more than two classes, softmax activation function can be used. The output of the softmax function is probability distribution that each of the classes is represented as the probability based on the input vectors
+
+##### Multi-class cross entropy
+In a previous post, I introduced a binary cross entropy which measures the uncertainty of probability distribution P and Q. The cross entropy can also be applied to multi-class cases which is called multi-class cross entropy.
+$$
+L = -\frac{1}{N} \sum_{i=1}^N \mathbf{y}_i^\top \log f_W(\mathbf{x}_i)
+$$
+where $y_i$ is a one-hot vector with the ground truth classes which is multiplied by log of neural network function $f_W(\mathbf{x}_i)$ parameterized by w, which is a vector of probabilities.
+
+### Optimizing MLP: Backpropagation & Autograd
+Backpropagation (BP) algorithm is widely used for training feedforward neural networks such as Multi-Layer Perceptron (MLP). In fitting a neural network, backpropagation works by computing the gradient of the loss function with respect to the weights of the network in such a way to update weights to minimize loss of the function. The backpropagation also uses chain rule which computes the gradient one layer at a time, iterating backward from the last layer to avoid redundant calculations of intermediate terms. In simple terms, backpropagation performs a backward pass while adjusting the network’s parameters including weights and biases.
+
+{% include aligner.html images="posts/aiml-mlp/S2.png"%}
+
+In the above diagram, the first unit (ZL-2) is an output from some lower layers and is passed to the first activation function (σL-2). The result of the activation function is multiplied by the matrix (WL-1) into an intermediate variable (ZL-1).
+
+To optimize parameters (W) of MLP, we need to calculate derivatives of loss functions (WL and σL) against the parameters (WL). The derivatives can be computed by applying chain rules.
+
+In modern neural networks, the actual computational graph of neural networks is very complex. However, as long as the chain rules applied and the graph is a directed acyclic graph, back propagation can be used for optimizing neural networks including MLP.
+
+##### Auto-differentiation (Autograd)
+Modern neural networks architectures including PyTorch and Tensorflow provides auto-differentiation which does a lot of calculations behind its curtain to make sure the networks can get the right derivatives. Although I would not get down to the nitty-gritty of auto-differentiation in this post, the basic idea behind the autograd is still remains at a matrix multiplication.
+
+$$
+\frac{\partial L}{\partial \mathbf{W}_L} = \frac{\partial L}{\partial \mathbf{a}_L(\mathbf{z}_L)} \frac{\partial \mathbf{a}_L(\mathbf{z}_L)}{\partial \mathbf{z}_L} \frac{\partial \mathbf{z}_L}{\partial \mathbf{W}_L}
+$$
+
+For each of the operations including activation function and multiplication, autograd is smart enough to know how to compute its derivative.
+
+### Vanishing Gradient Problem
+The vanishing gradient problem is encountered when training neural networks with gradient-based methods and backpropagation. In such methods, each weights in networks receives update proportional to partial derivative of loss function with respect to the current weight in each iteration.
+
+The problem is that the gradient will be vanishingly small, effectively preventing the weight from changing its value. Even in worst case, this may completely stop the training. For instance, traditional activation function such as the hyperbolic tangent function have gradients in range of [0, 1], and backpropagation computes gradients using a chain rule. This has the effect of multiplying n small numbers to compute gradients of the early layers (in an n-layer network), resulting in exponential decrease of gradients while the early layers train very slow.
+
+On the contrary, when some activation functions are used whose derivatives can take on larger values, one risks encountering the related exploding gradient problem.
+
+{% include aligner.html images="posts/aiml-mlp/S3.png"%}
+
+In the following network architecture, the gradient with respect to the parameter at layer 1 can be computed as:
+
+{% include aligner.html images="posts/aiml-mlp/S4.png" caption="Where rex box denotes derivative of an activation function"%}
+
+The red boxes denoting derivatives of activation functions are diagonal matrix with component-wise derivative on the diagonal . A problem is both hyperbolic tangent and sigmoid functions have derivatives less than 1, which leads the gradients to diminish and making it impossible to train.
+
+Solutions to the vanishing gradient problem is proposed by modern neural networks with the following techniques:
+
+- Apply different activation function which have gradients equal to 1
+- Apply optimization methods like Adam which adaptively scales gradients
+- Skip connections which create different paths for gradients to flow
+- Use long-short-term memory units
+
+If we train neural networks with many matrices whose minimum singular values are all greater than 1, then products of those metrices will grow exponentially. On the contract to the vanishing gradient problem, the gradients keep on getting larger as the backpropagation progresses, which leads to very large weight updates and causes the gradient descent to diverge. A rescue to the exploding gradient problem is known as gradient clipping. The gradient clipping sets a maximum value for the gradient norm, and if the gradient exceeds the values, then it scales it back. I will also cover this topic in the future post. Stay tuned !

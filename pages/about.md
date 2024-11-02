@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: AboutMe
 permalink: /about/
 feature-img: "assets/img/pexels/header_feature_image.jpg"
 tags: [Page]

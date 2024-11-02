@@ -2,7 +2,7 @@
 layout: post
 title: Logistic Regression - All things considered
 feature-img: "assets/img/posts/aiml-logistics/S0.png"
-thumbnail: "assets/img/posts/aiml-logistics/S0.png"
+#thumbnail: "assets/img/posts/aiml-logistics/S0.png"
 tags: AI/ML
 categories: PhD Study Note
 ---

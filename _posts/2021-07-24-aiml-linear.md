@@ -2,7 +2,7 @@
 layout: post
 title: Complete Guide to Linear Regression - Probabilistic Perspective
 feature-img: "assets/img/posts/aiml-linear/S0.png"
-thumbnail: "assets/img/posts/aiml-linear/S0.png"
+#thumbnail: "assets/img/posts/aiml-linear/S0.png"
 tags: AI/ML
 categories: PhD Study Note
 ---

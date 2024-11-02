@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Fundamentals of Multi-layer Perceptron
-feature-img: "assets/img/posts/informationTheoryHeader.jpeg"
-thumbnail: "assets/img/posts/informationTheoryHeader.jpeg"
-tags: [AI/AML]
+feature-img: "assets/img/posts/aiml-mlp/S0.png"
+thumbnail: "assets/img/posts/aiml-mlp/S0.png"
+tags: AI/AML
 categories: PhD Study Note
 ---
 

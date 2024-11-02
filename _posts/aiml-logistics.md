@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Logistic Regression - All things considered
-feature-img: "assets/img/posts/aiml-logistics/a1.png"
-thumbnail: "assets/img/posts/aiml-logistics/a1.png"
+feature-img: "assets/img/posts/aiml-logistics/S0.png"
+thumbnail: "assets/img/posts/aiml-logistics/S0.png"
 tags: AI/ML
 categories: PhD Study Note
 ---
@@ -114,12 +114,12 @@ where we come to the derivative at the location of $\beta_{t-1}$ which is multip
 #### Gradient descent: Minimum
 Let’s take a moment to reflect two functions. For any values x and y, x is called a local minimum of function f(x) when $f(x) ≤ f(x + y)$. On the other hand, x is called global minimum of function (x) when $f(x) ≤ f(y)$.
 
-{% include aligner.html images="posts/aiml-logistics/s2.png" caption="A global minimum must be a local minimum, but the local minimum may not be the global minimum." %}
+{% include aligner.html images="posts/aiml-logistics/S2.png" caption="A global minimum must be a local minimum, but the local minimum may not be the global minimum." %}
 
 #### Gradient descent: Convex function
 Mathematical definition of convex function is not easy to understand for beginners. The below diagram may provide a quick intuition of convex function.
 
-{% include aligner.html images="posts/aiml-logistics/s3.png" caption="On X-axis, we have values a and b corresponding to Y-axis f(a) and f(b). A line segment connecting f(a) and f(b), blue line, lies above the function between a and b. If function is really convex, any local minimum is also a global minimum which can be found in red curve.." %}
+{% include aligner.html images="posts/aiml-logistics/S3.png" caption="On X-axis, we have values a and b corresponding to Y-axis f(a) and f(b). A line segment connecting f(a) and f(b), blue line, lies above the function between a and b. If function is really convex, any local minimum is also a global minimum which can be found in red curve.." %}
 
 In the diagram above, we have a very solid mathematical guarantees of finding the global minima in a convex function (local minimum = global minimum). In other words, if f(x) is convex, any local minimum is also a global minimum. In most cases, the convex function appears in logistic regression and linear regression, but deep neural networks do not have convex loss function. Despite the lack of convex loss function, in practice, we can usually find pretty good local optima from neural networks if not all cases.
 

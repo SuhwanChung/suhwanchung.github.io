@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Complete Guide to Linear Regression - Probabilistic Perspective
-feature-img: "assets/img/posts/Linear regression - probability/feature-image.png"
-thumbnail: "assets/img/posts/Linear regression - probability/feature-image.png"
+feature-img: "assets/img/posts/aiml-linear/S0.png"
+thumbnail: "assets/img/posts/aiml-linear/S0.png"
 tags: AI/ML
 categories: PhD Study Note
 ---
@@ -34,7 +34,7 @@ The burning question: How do we fit parameters \( \boldsymbol{\beta} \) and \( \
 ### 3. Geometric Intuition
 Finding the parameters \( \boldsymbol{\beta} \) and error term \( \beta_0 \) from observed data points is central to solving linear regression problems. In one dimension, the goal is to find the line that best fits the data. In two dimensions, this line extends to a plane, and in higher dimensions, it becomes a hyperplane.
 
-{% include aligner.html images="posts/Linear regression - probability/2d.png" %}
+{% include aligner.html images="posts/aiml-linear/S1.png" %}
 
 Before diving deeper into high-dimensional cases, let's revisit the concept of loss functions used to calculate errors.
 
@@ -76,11 +76,12 @@ $$
 
 Second-order functions can be represented using the Hessian matrix, which is symmetric.
 
-{% include aligner.html images="posts/Linear regression - probability/s3.png" %}
+{% include aligner.html images="posts/aiml-linear/S3.png" %}
 
 The Hessian matrix's diagonal entries are the second-order derivatives with respect to each feature. Off-diagonal entries show the mixed second-order derivatives. In higher dimensions, the shape of the function depends on the definiteness of this matrix.
 
-{% include aligner.html images="posts/Linear regression - probability/s4.png" caption="Positive semi-definiteness leads to a local minimum, while NSD leads to a maximum loss." %}
+{% include aligner.html images="posts/aiml-linear/S4.png" caption="Positive semi-definiteness leads to a local minimum, while NSD leads to a maximum loss." %}
+
 
 ### 6. All Things Considered
 We can now express the parameters \( \boldsymbol{\beta} \) of linear regression in a way that minimizes loss:

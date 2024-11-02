@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Information Theory- Quick refresh
-feature-img: "assets/img/posts/informationTheoryHeader.jpeg"
-thumbnail: "assets/img/posts/informationTheoryHeader.jpeg"
+feature-img: "assets/img/posts/aiml-information/S0.png"
+thumbnail: "assets/img/posts/aiml-information/S0.png"
 tags: AI/ML
 categories: PhD Study Note
 ---
@@ -20,9 +20,7 @@ That's where entropy comes in. It helps us figure out the level of `uncertainty 
 $$
     H(P(X)) = -\sum_{i} P(X = x_i) \log P(X = x_i)
 $$
-```yaml
-Entropy of discrete variables where $H$ is Shannon entropy and P(X) is discrete probability
-```
+where entropy of discrete variables where $H$ is Shannon entropy and P(X) is discrete probability.
 
 Take a look at some dice rolls in real life:
 - A fair die has uniform probabilities: {1/6, 1/6, 1/6, 1/6, 1/6, 1/6}
@@ -81,4 +79,4 @@ But here’s the thing: KL divergence isn’t symmetric, which means
 
 To wrap your head around it, think of 𝑃 as the numerator and Q as the denominator in that log ratio. If P comes out larger than Q, the product in the formula gets blown up, making the divergence spike. So, when 𝑃 towers over Q, you can expect a hefty divergence, showing a big gap between the two.
 
-{% include aligner.html images="posts/Information theory/image.png, posts/Information theory/image-1.png" caption="Large divergence (distribution) between probabilitiy distributions P and Q in difference scenarios" %}
+{% include aligner.html images="posts/aiml-information/S1.png, posts/aiml-information/S2.png" caption="Large divergence (distribution) between probabilitiy distributions P and Q in difference scenarios" %}

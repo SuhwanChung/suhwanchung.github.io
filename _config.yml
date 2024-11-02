@@ -5,15 +5,15 @@ url: "https://suhwanchung.github.io"
 # THEME-SPECIFIC CONFIGURATION
 title: Suhwan Chung                                  # site's title
 description: "A website with blog posts and pages"      # used by search engines
-avatar: assets/img/profile.jpg                         # Empty for no avatar in navbar
+avatar: assets/img/triangle.png                         # Empty for no avatar in navbar
 favicon: assets/favicon.ico                             # Icon displayed in the tab
 
 # Header and footer text
-header_text: Howdy, Welcome to my blog !  # Change Blog header text
-header_feature_image: assets/img/header/header_feature_image.jpg
+header_text: AI/ML, Quant, Banking  # Change Blog header text
+header_feature_image: assets/img/header/triangular-medium.jpeg
 header_feature_image_responsive: true
 footer_text: >
-  (c) Copyright 2024 Suhwan Chung. ALl rights reserved
+  (c) Copyright 2023-2024 Suhwan Chung. All rights reserved
 
 # Blog
 excerpt: true                                           # Or "truncate" (first 250 characters), "false" to disable

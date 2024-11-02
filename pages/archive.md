@@ -6,4 +6,6 @@ hide: true
 excluded: true
 icon: "fa-archive"
 position: 6
+hide: true
+excluded: true
 ---

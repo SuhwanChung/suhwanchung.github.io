@@ -2,13 +2,13 @@
 layout: page
 title: About
 permalink: /about/
-feature-img: "assets/img/pexels/travel.jpeg"
+feature-img: "assets/img/pexels/header_feature_image.jpg"
 tags: [Page]
 ---
-
-Type on Strap is based on Type Theme, a free and open-source theme for [Jekyll](http://jekyllrb.com/), licensed under the MIT License.
-
-Head over to the [theme's documentation](https://github.com/sylhare/Type-on-Strap) for much more information about Type on Strap or to install this theme on your own Jekyll site.
-
-This file is an example of a page in Jekyll, that automatically shows up in the header navigation, you can delete or modify this file freely.
  
+
+Over the past eight years, I've been extensively applying AI/ML to drive change at large organizations. I've focused on helping teams—and sometimes entire companies—identify risks and drive opeartional efficiency. 
+
+I earned my Bachelor’s in Business Administration from [Dankook University](https://www.dankook.ac.kr/web/international), followed by a Master’s in Data Science from the [National University of Singapore](https://www.nus.edu.sg/). I then pursued a PhD at [Nanyang Technological University](https://www.ntu.edu.sg/), focusing my research on large time series models.
+
+My family and I have been happily settled in Singapore for the past eight years. I live here with my wonderful wife and our two kids, Ain and Gunwoo.

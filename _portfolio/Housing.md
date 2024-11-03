@@ -7,6 +7,7 @@ tags: AI/ML
 ---
 
 {% include aligner.html images="portfolio/Housing/S0.png"%}
+:label: DataMeka competition series
 
 Back in 2023, I organized a Machine Learning competition and launched a `machine learning playground` called DataMeka. This initiative was a collaborative effort, bringing together 8-10 researchers, fellow PhDs, professors, and data science professionals working in Singapore. Our first competition series was predictive modeling Singapore housing price and find factors affecting to the real estate market. 
 

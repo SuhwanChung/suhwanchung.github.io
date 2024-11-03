@@ -7,13 +7,9 @@ tags: AI/ML
 ---
 
 {% include aligner.html images="portfolio/Group/S0.png"%}
-
-*This research is part of a joint project between Becton Dickinson and Nanyang Technological University to develop machine learning techniques for demand forecasting in supply chain management*
-
-{% include aligner.html images="portfolio/Reptile/S0.png" caption="Joint series networks analysis using Louvian method"%}
+:label: Joint research project between Becton Dickinson and Nanyang Technological University
 
 When time series with low sample sizes are grouped to estimate a single parameter, the underlying correlations inherent in related series can be discovered to estimate a global parameter. However, determining time-series homogeneity is not straightforward, especially when the series fluctuates across different time segments. This research investigates the structural similarities of joint series by incorporating feature characterization methods. It applies deep embedded clustering and network analysis to uncover grouped series based on these structural similarities.
-
 
 ### Methodology
 The research methodology consists of three steps: (1) Extracting time-series characteristics to reveal structural similarities, then conducting factor loading analysis to identify the most significant features for series segmentation. (2) Identifying homogeneous series by applying techniques such as Deep Embedded Clustering (DEC) and network analysis using the Louvain method. (3) Training and forecasting based on joint-series using XGBoost, Support Vector Regression, Random Forest Regression, then evaluating accuracy improvements among weak predictors compared to benchmark univariate methods.

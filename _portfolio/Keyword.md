@@ -6,7 +6,9 @@ date: 2023-08-30
 tags: AI/ML
 ---
 
+
 {% include aligner.html images="portfolio/Keyword/S0.png"%}
+:label: Joint research project between Becton Dickinson and Nanyang Technological University
 
 Recent advancements in time series forecasting have highlighted the potential of incorporating Google Trends data to model trends or seasonality in target variables of interest. This approach has received significant attention in the research community due to its promising outcomes. However, two primary challenges persist: (1) the selection of salient keywords as informative predictors from a high-dimensional feature space, and (2) the concurrent modeling of both keyword and target variable data for time series forecasting.
 
@@ -132,5 +134,3 @@ x_{i,T} & x_{i,T-1} & \ldots & x_{i,T-l+1}
 $$
 
 where $X_i$ is the lag-embedded matrix for series $i$, and $T$ is the total number of observations in series $i$. By stacking the lag-embedded matrices, the cross-series learning method can leverage shared patterns and dependencies across grouped series of interests by learning a single forecasting function using the pooled information.
-
-*This research will be published as a research paper which is currently under review. Once approved, I will share the source code and paper.*

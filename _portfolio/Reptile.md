@@ -7,6 +7,7 @@ tags: AI/ML
 ---
 
 {% include aligner.html images="portfolio/Reptile/S0.png"%}
+:label: My PhD Research Project
 
 ### Reptile Frameworks
 In predictive forecasting, high variability and small sample sizes for model training present significant challenges. To tackle this issue, I'm introducing a scalable meta-learning algorithm for time-series forecasting, inspired by OpenAI's Reptile algorithm. At its core, we're using Reptile-based principles to train neural networks (FeatureNet) that extract transferable features across various univariate series. Complementing this, secondary networks (FineTuneNet) refine the final outputs for numeric predictions. The pseudocode of Reptile algorithm is as follows:

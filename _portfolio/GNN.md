@@ -7,6 +7,7 @@ tags: AI/ML
 ---
 
 {% include aligner.html images="portfolio/GNN/S0.png"%}
+:label: My PhD Research Project
 
 In time series forecasting, modeling cross-series interactions has become increasingly popular, due to its promising results. The idea of multi-variate time series representation learning has an advantage over its uni-variate counterpart for the opportunity to identify underlying patterns between series that show similar behaviors. The main challenge of the aforementioned technique is to concurrently model both intra- and inter-series interactions. Spectral Temporal Graph Neural Network (StemGNN) [4] is a recent proposal that employs a self-attention mechanism to learn correlations between series. In our work, we improve the original architecture from two perspectives: first, we incorporate Transformers instead of GRU in order to learn the intra-series representation. Second, we construct a robust clustering layer using Dynamic Time Warping to gain prior knowledge on inter-series correlations among stock series. After passing through the the time warping clustering layer, the cluster of joint-series input is fed into StemGNN blocks to evaluate improvements in forecasting accuracy. The dataset used to investigate the benefits of our approach, is built from the set of S&P 500 listed stocks. It is a real-world dataset with prices from a time window of 5 years, and offers great economic opportunities. Extensive experiments, along with an ablation study, prove the effectiveness of our model with respect to the original work. Moreover, our proposed solution proves to be more time-efficient, thanks to Transformers non-recurrent nature, as well as parameter-efficient.
 
@@ -120,7 +121,8 @@ In this work we tackled the very challenging problem of Stock Price Prediction, 
 {% include aligner.html images="portfolio/GNN/S12.png"%}
 
 
-### Reference
+<details>
+    <summary>References</summary>
 References
 [1] 2018. Spatio-Temporal Graph Convolutional Networks: A Deep Learning Framework for Traffic Forecasting. Proceedings of the Twenty-Seventh International Joint Conference on Artificial Intelligence (Jul 2018). https://doi.org/10.24963/ijcai. 2018/505
 [2] Dzmitry Bahdanau, Kyunghyun Cho, and Yoshua Bengio. 2015. Neural Machine Translation by Jointly Learning to Align and Translate. CoRR abs/1409.0473 (2015).
@@ -144,8 +146,9 @@ References
 [19] Chuxu Zhang, Dongjin Song, Yuncong Chen, Xinyang Feng, Cristian Lumezanu, Wei Cheng, Jingchao Ni, Bo Zong, Haifeng Chen, and Nitesh V Chawla. 2019. A deep neural network for unsupervised anomaly detection and diagnosis in multivariate time series data. In Proceedings of the AAAI Conference on Artificial Intelligence, Vol. 33. 1409–1416.
 [20] Zhuosheng Zhang, Yuwei Wu, Hai Zhao, Zuchao Li, Shuailiang Zhang, Xi Zhou, and Xiang Zhou. 2019. Semantics-aware BERT for Language Understanding. CoRR abs/1909.02209 (2019). arXiv:1909.02209 http://arxiv.org/abs/1909.02209
 [21] Xiaodan Zhu, Anh Ninh, Hui Zhao, and Zhenming Liu. 2021. Demand Forecasting with Supply-Chain Information and machine learning: Evidence in the Pharmaceutical Industry. Production and Operations Management (2021).
-
-
+</details>
 
 > Download Original Paper
 Here is my research paper: [Download PDF](assets/img/portfolio/GNN/gnn-stock-price-prediction-ntu.pdf)
+
+*This research is part of my PhD project at Nanyang Technological University. If you wish to cite this content, please follow standard conventions for citing website material.*

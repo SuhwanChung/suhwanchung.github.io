@@ -2,7 +2,7 @@
 layout: post
 title: DeepFashion Attributes Prediction using ResNet
 img: "assets/img/portfolio/DeepFashion/S0.png"
-date: 2022
+date: 2022-06-02
 tags: AI/ML
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: Exploring Google Trends keywords as a proxy for exogenous demand sensing signals
 img: "assets/img/portfolio/Keyword/S0.png"
-date: 2023
+date: 2023-08-30
 tags: AI/ML
 ---
 

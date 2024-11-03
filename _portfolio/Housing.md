@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Predictive Modeling for Singapore Housing Price Prediction
-img: "assets/img/portfolio/Housing/P0.png"
+img: "assets/img/portfolio/Housing/S0.png"
 date: 2023-05-30
 tags: AI/ML
 ---

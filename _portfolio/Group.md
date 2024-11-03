@@ -6,6 +6,8 @@ date: 2023-04-30
 tags: AI/ML
 ---
 
+{% include aligner.html images="portfolio/Group/S0.png"%}
+
 *This research is part of a joint project between Becton Dickinson and Nanyang Technological University to develop machine learning techniques for demand forecasting in supply chain management*
 
 {% include aligner.html images="portfolio/Reptile/S0.png" caption="Joint series networks analysis using Louvian method"%}

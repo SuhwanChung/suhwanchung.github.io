@@ -7,7 +7,7 @@ tags: AI/ML
 ---
 
 {% include aligner.html images="portfolio/miRNA/S0.png"%}
-:label: My PhD Research Project
+🏷️ PhD Research Project
 
 This study explores the use of embeddings for analyzing gene expression (GE) and micro-RNA (miRNA) data, focusing on a multi-omics approach. By learning gene, miRNA, and sample embeddings from this dataset, we constructed correlation networks and performed pathway analysis to uncover biological processes and pathways associated with breast cancer.
 
@@ -17,4 +17,7 @@ Further pathway analysis of the entire gene set highlighted numerous enriched pa
 
 For more details, here's the full research paper:
 
-<iframe src="{{ '/assets/documents/img/portfolio/miRNA/Embeddings Multiomics Data for Correlation Network Construction and Pathway Analysis.pdf' | relative_url }}" width="100%" height="600px"></iframe>
+<!-- <iframe src="{{ '/assets/documents/img/portfolio/miRNA/Embeddings Multiomics Data for Correlation Network Construction and Pathway Analysis.pdf' | relative_url }}" width="100%" height="600px"></iframe> -->
+
+<iframe src="{{ '/assets/documents/img/portfolio/miRNA/omics-paper.pdf' | relative_url }}" width="100%" height="600px"></iframe>
+

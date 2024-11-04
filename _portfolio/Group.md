@@ -7,22 +7,27 @@ tags: AI/ML
 ---
 
 {% include aligner.html images="portfolio/Group/S0.png"%}
-:label: Joint research project between Becton Dickinson and Nanyang Technological University
+🏷️ Joint research project between Becton Dickinson and Nanyang Technological University
 
-When time series with low sample sizes are grouped to estimate a single parameter, the underlying correlations inherent in related series can be discovered to estimate a global parameter. However, determining time-series homogeneity is not straightforward, especially when the series fluctuates across different time segments. This research investigates the structural similarities of joint series by incorporating feature characterization methods. It applies deep embedded clustering and network analysis to uncover grouped series based on these structural similarities.
+When time series with low sample sizes are grouped to estimate a single parameter, the underlying correlations inherent in related series can be discovered to estimate a global parameter. However, determining time-series homogeneity is not straightforward, especially when the series fluctuates across different time segments. This research investigates the structural similarities of time series by incorporating feature characterization methods. It then applies deep embedded clustering and network analysis to group series based on the structural similarities.
 
-### Methodology
-The research methodology consists of three steps: (1) Extracting time-series characteristics to reveal structural similarities, then conducting factor loading analysis to identify the most significant features for series segmentation. (2) Identifying homogeneous series by applying techniques such as Deep Embedded Clustering (DEC) and network analysis using the Louvain method. (3) Training and forecasting based on joint-series using XGBoost, Support Vector Regression, Random Forest Regression, then evaluating accuracy improvements among weak predictors compared to benchmark univariate methods.
+### Methodology Overview
+The research methodology is broken down into three key steps:
+1. **Time-series Characterization**: Extract time-series characteristics to express underlying characteristics from each uni-variate series using feature extraction techniques, *TSFRESH*. It then performs factor loading analysis to identify the most significant features, which are then used to segment and group the series based on the structural similarities found in the next stage.
 
-{% include aligner.html images="portfolio/Reptile/S1.png" caption="Network plot of time series using a feature-based approach (structural similarities) revealed clear communities"%}
+2. **Clustering and Network Analysis**: Identify homogeneous time series and group homogenous series. This research employs advanced clustering techniques like Deep Embedded Clustering (DEC) and network analysis with the Louvain method to detect meaningful community structures among series.
 
-{% include aligner.html images="portfolio/Reptile/S2.png" caption="Time-series plots showcasing four clusters defined by the Deep Embedded Clustering method. Mirroring the network analyses, these four distinct clusters emerged from 1,200 unique series. The red line represents the average values at each time point"%}
+{% include aligner.html images="portfolio/Group/S1.png,S2.png" caption="Clusters defined by network analysis (left) and the same number of clusters defined by Deep Embedded Clustering (right), both based on expressed features. Those four distinct clusters emerged from 1,200 unique uni-variate series. The red line (right) represents the average serial values of each group"%}
+
+3. **Model Training and Forecasting**: Employ machine learning models including XGBoost, Support Vector Regression, and Random Forest Regression to train and forecast based on the grouped series. Unlike traditional univariate forecasting, which uses individual learning parameters, a single learning function is applied to each group of series for concurrent modeling or cross-series training. We then compare the accuracy of these models against traditional univariate methods, particularly focusing on performance improvements among weaker predictors.
 
 ### Results
 To evaluate prediction performance, we categorized each time series into four groups based on their respective quantiles: strong (top 10%), good (10-30%), average (30-60%), and weak (60-99%) predictors. The baseline model results are represented by a red line, while the orange line illustrates the forecast accuracy achieved using our proposed method. We employed the Mean Absolute Scaled Error (MASE) as our error metric.
 
-{% include aligner.html images="portfolio/Reptile/S3.png"%}
+{% include aligner.html images="portfolio/Group/S3.png"%}
 
-Our analysis reveals two significant findings: (1) Cross-series forecasting proves particularly effective for below-average predictors. (2) For the weak predictor group, we observed that expanding the feature space beyond approximately 160 features does not lead to further improvements in accuracy. Using the red line as a benchmark, we note that our clustering model substantially enhances results for weaker predictors, although it shows a slight detrimental effect on strong predictors.
+Our analysis reveals two findings: 
+1. Cross-series forecasting proves particularly effective for below-average predictors.
+2. For the weak predictor group, we observed that expanding the feature space beyond approximately 160 features does not lead to further improvements in accuracy. 
 
-Furthermore, our findings indicate that out of the 1,200 features extracted through feature characterization algorithms, approximately 13% prove to be valuable. Interpreting these significant features within the business context can provide valuable insights for decision-making and strategy formulation.
+Using the red line as a benchmark, we note that our clustering model substantially improved results for weaker predictors, although it shows a slight detrimental effect on strong predictors.

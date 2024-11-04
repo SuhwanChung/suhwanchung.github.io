@@ -7,7 +7,7 @@ tags: AI/ML
 ---
 
 {% include aligner.html images="portfolio/DeepFashion/S0.png"%}
-:label: My PhD Research Project
+🏷️ PhD Research Project
 
 Deep learning has been an effective method for images classification for learning features of attributes in images. Despite the recent breakthrough of research in deep neural networks classifier pretrained with large image database, global fashion brands have been facing challenges in real world applications of deep learning technology mainly due to limitations in fashion image annotations. DeepFashion2 datasets is introduced to have rich annotations for fashion items/garments to address the challenges in annotations. In this study, we demonstrate application of ResNet-50 in DeepFashion2 through a transfer learning mechanism and evaluate optimization and regularization techniques.
 
@@ -112,13 +112,10 @@ As future work, we will dive deeper into ResNet-50 networks to increase model ca
 
 <details>
     <summary>References</summary>
-[1] Liu, Ziwei, et al. “Deepfashion: Powering robust clothes recognition and retrieval with rich annotations.” Proceedings of the IEEE conference on computer vision and pattern recognition. 2016.
-
-[2] Torrey, Lisa, and Jude Shavlik. “Transfer learning.” Handbook of research on machine learning applications and trends: algorithms, methods, and techniques. IGI global, 2010. 242-264.
-
-[3] He, Tong, et al. “Bag of tricks for image classification with convolutional neural networks.” Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2019.
-
-[4] He, Kaiming, et al. “Deep residual learning for image recognition.” Proceedings of the IEEE conference on computer vision and pattern recognition.
+- [1] Liu, Ziwei, et al. “Deepfashion: Powering robust clothes recognition and retrieval with rich annotations.” Proceedings of the IEEE conference on computer vision and pattern recognition. 2016.
+- [2] Torrey, Lisa, and Jude Shavlik. “Transfer learning.” Handbook of research on machine learning applications and trends: algorithms, methods, and techniques. IGI global, 2010. 242-264.
+- [3] He, Tong, et al. “Bag of tricks for image classification with convolutional neural networks.” Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2019.
+- [4] He, Kaiming, et al. “Deep residual learning for image recognition.” Proceedings of the IEEE conference on computer vision and pattern recognition.
 </details>
 
 *This research is part of my PhD project at Nanyang Technological University. If you wish to cite this content, please follow standard conventions for citing website material.*

@@ -1,4 +1,26 @@
 {% assign images = include.images | split: ',' %}
+{% assign column = include.column | default: images.size %}
+{% assign columnWidth = 100.0 | divided_by: column %}
+
+<figure class="row">
+  {% for image in images %}
+    <div class="column" style="flex: 0 0 {{ columnWidth }}%;">
+      <img src="{{ image | strip | prepend: 'assets/img/' | relative_url }}"
+           alt="{{ image | split: '/' | last | strip }}"
+           style="width: 100%; height: auto;">
+    </div>
+  {% endfor %}
+  {% if include.caption %}
+    <figcaption class="caption-style">{{ include.caption }}</figcaption>
+  {% endif %}
+</figure>
+
+
+
+
+
+
+<!-- {% assign images = include.images | split: ',' %}
 
 {% if include.column == "auto" %}
   {% assign column = 100.0 | divided_by: images.size %}
@@ -20,7 +42,11 @@
   {% endif %}
 </figure>
 
-{% assign column = false %}
+{% assign column = false %} -->
+
+
+
+
 
 
 <!-- {% assign images = include.images | split: ',' %}

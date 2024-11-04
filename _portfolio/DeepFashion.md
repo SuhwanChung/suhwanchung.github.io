@@ -111,11 +111,14 @@ Based on the final networks evaluated with different optimization and regulariza
 As future work, we will dive deeper into ResNet-50 networks to increase model capacity in the final fully connected layer and evaluate other ImageNet pretrained models including VGGNet and AlexNet. We will also make use of additional ground truth landmarks and bounding boxes of each image as additional attributes to learn.
 
 <details>
-    <summary>References</summary>
-- [1] Liu, Ziwei, et al. “Deepfashion: Powering robust clothes recognition and retrieval with rich annotations.” Proceedings of the IEEE conference on computer vision and pattern recognition. 2016.
-- [2] Torrey, Lisa, and Jude Shavlik. “Transfer learning.” Handbook of research on machine learning applications and trends: algorithms, methods, and techniques. IGI global, 2010. 242-264.
-- [3] He, Tong, et al. “Bag of tricks for image classification with convolutional neural networks.” Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2019.
-- [4] He, Kaiming, et al. “Deep residual learning for image recognition.” Proceedings of the IEEE conference on computer vision and pattern recognition.
+  <summary>References</summary>
+  <ul>
+    <li>[1] Liu, Ziwei, et al. “Deepfashion: Powering robust clothes recognition and retrieval with rich annotations.” Proceedings of the IEEE conference on computer vision and pattern recognition. 2016.</li>
+    <li>[2] Torrey, Lisa, and Jude Shavlik. “Transfer learning.” Handbook of research on machine learning applications and trends: algorithms, methods, and techniques. IGI global, 2010. 242-264.</li>
+    <li>[3] He, Tong, et al. “Bag of tricks for image classification with convolutional neural networks.” Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2019.</li>
+    <li>[4] He, Kaiming, et al. “Deep residual learning for image recognition.” Proceedings of the IEEE conference on computer vision and pattern recognition.</li>
+  </ul>
 </details>
+
 
 *This research is part of my PhD project at Nanyang Technological University. If you wish to cite this content, please follow standard conventions for citing website material.*

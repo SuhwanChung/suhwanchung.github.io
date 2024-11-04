@@ -17,7 +17,8 @@ The research methodology is broken down into three key steps:
 
 2. **Clustering and Network Analysis**: Identify homogeneous time series and group homogenous series. This research employs advanced clustering techniques like Deep Embedded Clustering (DEC) and network analysis with the Louvain method to detect meaningful community structures among series.
 
-{% include aligner.html images="portfolio/Group/S1.png,portfolio/Group/S2.png" caption="Clusters defined by network analysis (left) and the same number of clusters defined by Deep Embedded Clustering (right), both based on expressed features. Those four distinct clusters emerged from 1,200 unique uni-variate series. The red line (right) represents the average serial values of each group"%}
+{% include aligner.html images="portfolio/Group/S1.png,portfolio/Group/S2.png" caption="Clusters defined by network analysis (left) and the same number of clusters defined by Deep Embedded Clustering (right), both based on expressed features. Those four distinct clusters emerged from 1,200 unique uni-variate series. The red line (right) represents the average serial values of each group" %}
+
 
 3. **Model Training and Forecasting**: Employ machine learning models including XGBoost, Support Vector Regression, and Random Forest Regression to train and forecast based on the grouped series. Unlike traditional univariate forecasting, which uses individual learning parameters, a single learning function is applied to each group of series for concurrent modeling or cross-series training. We then compare the accuracy of these models against traditional univariate methods, particularly focusing on performance improvements among weaker predictors.
 

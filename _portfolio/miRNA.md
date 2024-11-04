@@ -19,5 +19,5 @@ For more details, here's the full research paper:
 
 <!-- <iframe src="{{ '/assets/documents/img/portfolio/miRNA/Embeddings Multiomics Data for Correlation Network Construction and Pathway Analysis.pdf' | relative_url }}" width="100%" height="600px"></iframe> -->
 
-<iframe src="{{ '/assets/documents/img/portfolio/miRNA/omics-paper.pdf' | relative_url }}" width="100%" height="600px"></iframe>
+<iframe src="{{ '/assets/img/portfolio/miRNA/omics-paper.pdf' | relative_url }}" width="100%" height="600px"></iframe>
 

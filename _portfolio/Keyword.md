@@ -47,7 +47,7 @@ For the last decade, a great deal of study on meaningful **Time Series Character
 {% include aligner.html images="portfolio/Keyword/S2.png" caption="Investigation of underlying characteristics of time series using tsfresh algorithms for individual SKUs, generalized at the product-group level to retrieve insights for each product group
 "%}
 
-For instance, the notion of time series characterization method follows $$X_t\inR^n$$ which is $$n$$-dimensional time series at $$t$$-th time points. In order to extract time series characteristics from $n$ dimensional time series vectors consisting of $$t$$ time steps, the time series characterization function $$f_k$$ is constructed where $$k$$ is the number of feature vectors that follows $$\vec{x^n}$$ = $$(f_1(x^1), f_2(x^2), ...,f_k(x^N)$$ where $$n$$ corresponds to the total number of uni-variate time series features. The resulting design matrix would have $N$ rows and $k$ columns. In this research, a total 790 time series characteristics were extracted across 144 series which include Google search words (x47) and demands data for 97 products. In order to extract those features, we employ tsfresh Python package which includes feature generator which takes input time series and outputs feature vectors.
+For instance, the notion of time series characterization method follows $$X_t \in R^n$$ which is $$n$$-dimensional time series at $$t$$-th time points. In order to extract time series characteristics from $n$ dimensional time series vectors consisting of $$t$$ time steps, the time series characterization function $$f_k$$ is constructed where $$k$$ is the number of feature vectors that follows $$\vec{x^n}$$ = $$(f_1(x^1), f_2(x^2), ...,f_k(x^N)$$ where $$n$$ corresponds to the total number of uni-variate time series features. The resulting design matrix would have $$N$$ rows and $$k$$ columns. In this research, a total 790 time series characteristics were extracted across 144 series which include Google search words (x47) and demands data for 97 products. In order to extract those features, we employ tsfresh Python package which includes feature generator which takes input time series and outputs feature vectors.
 
 > Here are samples of the time series characteristics this research found to have significant impacts on model performance:
 
@@ -71,7 +71,7 @@ Linear trend in time series refers to movement of mean values over a long horizo
 
 
 ##### 2-3. Non-Linearity
-Conventional linear forecasting models have challenges in dealing with non-linear time series data, so special treatments including the use of forecasting models capable to handle non-linearity are required to handle the non-linearity in training data. Therefore, the non-linearity is one of the important characteristics in time series data analysis affecting the selection of appropriate forecasting models. In this research, we employ c3 statistics function which was introduced in [Schreiber 1997](https://journals.aps.org/pre/abstract/10.1103/PhysRevE.55.5443). Discrimination power of measures for nonlinearity in a time series PHYSICAL REVIEW E, VOLUME 55, NUMBER 5) to identify non-linear characteristics from each series. When $$\mathbb{E}$$ is the average and $L$ is the lag operator, a c3 statistics function to measure the non-linearity of time series:
+Conventional linear forecasting models have challenges in dealing with non-linear time series data, so special treatments including the use of forecasting models capable to handle non-linearity are required to handle the non-linearity in training data. Therefore, the non-linearity is one of the important characteristics in time series data analysis affecting the selection of appropriate forecasting models. In this research, we employ c3 statistics function which was introduced in [Schreiber 1997](https://journals.aps.org/pre/abstract/10.1103/PhysRevE.55.5443). Discrimination power of measures for nonlinearity in a time series PHYSICAL REVIEW E, VOLUME 55, NUMBER 5) to identify non-linear characteristics from each series. When $$\mathbb{E}$$ is the average and $$L$$ is the lag operator, a c3 statistics function to measure the non-linearity of time series:
 
 $$
 \frac{1}{n-2lag}\sum_{i=1}^{n-2lag}(x_{i} + 2lag)\cdot(x_{i+lag} \cdot x_{i})
@@ -81,7 +81,7 @@ which is:
 $$
 \mathbb{E}[L^2(X)\cdotL(X)\cdotX]
 $$
-where $\mathbb{E}$ is the mean and $\mathbb{L}$ is the lag operator.
+where $$\mathbb{E}$$ is the mean and $$\mathbb{L}$$ is the lag operator.
 
 ##### 2-4. Distribution
 

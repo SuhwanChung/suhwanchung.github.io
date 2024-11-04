@@ -128,8 +128,7 @@ I’m happy to share some standout submissions.
 
 By incorporating the winning models into our geographic visualizations, we were able to display predictive prices at the individual property level across the map of Singapore. 
 
-<iframe src="/portfolio/Housing/datameka-html.html" width="100%" height="600px" frameborder="0"></iframe>
-
+<iframe src="/assets/img/Housing/datameka-html.html" width="100%" height="600px" frameborder="0"></iframe>
 
 #### 
 If you’re curious to learn more about our efforts from DataMeka and the thought process behind the competition design, here’s [a link to a live webinar](https://www.youtube.com/watch?v=rpW8Mlf86k0) to learn more about the house hacking competition.

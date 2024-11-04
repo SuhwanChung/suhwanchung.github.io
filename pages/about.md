@@ -6,18 +6,20 @@ feature-img: "assets/img/header/header_feature_image.jpg"
 tags: [Page]
 ---
  
-Howdy! I'm Suhwan. Welcome to my blog, and thanks for stopping by.
+ {% include aligner.html images="aboutMe.jpeg"%}
 
-{% include aligner.html images="aboutMe.png"%}
+Howdy! I'm Suhwan, and I’m thrilled you’re here. Welcome to my blog!
 
-My life, both personally and professionally, revolves around three key aspects—what I like to call my “triangular” approach. You’ll notice this theme reflected in my website's logo.
+So, who am I? Well, I like to say my life revolves around a “triangular” approach, both personally and professionally. Yep, triangles—three strong points that define who I am. You’ll even see this theme reflected in my website's logo.
 
-From a skills standpoint, I’ve spent the past eight years driving change through :one: AI and machine learning at large organizations. My focus has been to help teams—and sometimes entire companies—achieve greater operational efficiency by leveraging AI/ML.
+First, there's my expertise in AI and machine learning. Over the past eight years, I’ve been working with maachine learning at large organizations. My mission? To help teams—and sometimes whole companies—transform and transform operations through predictive solutions.
 
-The second aspect of my triangle is :two: quantit trading. In my current role at UBS, I’m involved in non-financial risk modeling. This year, I’ve extended my interest into :two: quant modeling (mostly HFT) and experimented own investment strategy in my free time.
+Second, there’s my dive into quantitative trading. At UBS, I work in non-financial risk modeling, and I’ve recently started to explore quant modeling, especially high-frequency trading. In my free time, I experiment with investment strategies.
 
-Finally, there’s my passion for :three: investment. These three elements—AI/ML, quant modeling, and investment—shape my unique approach, and you will see my views, working projects in this website.
+And third, my love for investment rounds out the triangle. AI/ML, quant modeling, and investing are the pillars of my work, and you’ll find insights, projects, and stories about them as you explore my site.
 
-Academically, my journey also follows a triangular path. I earned a :one:Bachelor’s in Business from Dankook University, :two: a Master’s in Data Science from the National University of Singapore, and a :three: PhD in machine learning from Nanyang Technological University.
+My academic path also fits the triangular theme. I earned a Bachelor’s in Business from Dankook University, followed by a Master’s in Data Science from the National University of Singapore, and then a PhD in Machine Learning from Nanyang Technological University. Three schools, three degrees (although leaving PhD without completing disseration), and my commitment to learning.
 
-Personally, I’m head over heels for my little family: :one: my incredible wife, :two: our sweet daughter, :three: our brave son. They're my biggest supporters and constant source of inspiration in everything I do. 
+On the personal side, I’m all about my family. My incredible wife, our smart daughter, and our handsome son keep life fulfilling. They’re my biggest supporters and constant sources of inspiration.
+
+Dive in, explore, and I hope you enjoy getting a glimpse into the projects and passions that drive me.

@@ -1,8 +1,7 @@
 ---
 layout: post
 title: Anomaly Detection in Industrial Machinery Using Sound Data
-feature-img: "assets/img/portfolio/submarine.png"
-img: "assets/img/portfolio/submarine.png"
+img: "assets/img/portfolio/S0.png"
 date: 2023-10-03
 ---
 
@@ -50,11 +49,11 @@ To reproduce the research use case, I built a baseline anomaly detection model u
 
 For interested readers, you can also download the dataset using the links above and follow my tutorials below. 
 
-Table of Contents:
-1. DataLoader Construction: A PyTorch class designed to efficiently load and preprocess sound-anomaly pairs.
-2. Model Training: Optimization of the model using reconstruction loss, with the Adam optimizer ensuring efficient convergence.
-3. Model Building: A structured 1D convolutional neural network (CNN) composed of stacked convolution layers to capture sound data patterns.
-4. Model Evaluation: Performance assessment using the ROC score to evaluate the model's anomaly detection capabilities.
+#### Table of Contents:
+- 1. DataLoader Construction: A PyTorch class designed to efficiently load and preprocess sound-anomaly pairs.
+- 2. Model Training: Optimization of the model using reconstruction loss, with the Adam optimizer ensuring efficient convergence.
+- 3. Model Building: A structured 1D convolutional neural network (CNN) composed of stacked convolution layers to capture sound data patterns.
+- 4. Model Evaluation: Performance assessment using the ROC score to evaluate the model's anomaly detection capabilities.
 
 
 To manage the MIMII Dataset, I developed a custom PyTorch dataset class that loads (sound, anomaly) pairs.

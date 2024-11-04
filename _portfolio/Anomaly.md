@@ -40,8 +40,8 @@ The MIMII dataset is a collection of sound recordings from four types of industr
 {% include aligner.html images="portfolio/Anomaly/S1.png" width="60%" height="auto" %}
 
 For interested readers:
-- *Original Paper Source: https://arxiv.org/pdf/1909.09347.pdf*
-- *Original dataset link: https://zenodo.org/record/3384388*
+- [Original Paper Source](https://arxiv.org/pdf/1909.09347.pdf)
+- [Original dataset link](https://zenodo.org/record/3384388)
 
 ### Build baseline anomaly detection model using reconstruction techniques
 To reproduce the research use case, I built a baseline anomaly detection model using a 1-D convolutional neural network (CNN). The model employs a reconstruction technique. The reconstruction technique involves training a model using `normal data` and then using it to reconstruct new data points. The degree of difference between `the new data points` (reconstructed data points) and the `original data` (normal data) can be used to detect anomalies. Below is examples of signal spectrums under `normal` conditions.

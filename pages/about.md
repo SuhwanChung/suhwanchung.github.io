@@ -12,7 +12,7 @@ Howdy! I'm Suhwan, and I’m thrilled you’re here. Welcome to my blog!
 
 So, who am I? Well, I like to say my life revolves around a “triangular” approach, both personally and professionally. Yep, triangles—three strong points that define who I am. You’ll even see this theme reflected in my website's logo.
 
-First, there's my expertise in AI and machine learning. Over the past eight years, I’ve been working with maachine learning at large organizations. My mission? To help teams—and sometimes whole companies—transform and transform operations through predictive solutions.
+First, there's my expertise in AI and machine learning. Over the past eight years, I’ve been working with predicive analytics at large organizations. My mission? To help teams—and sometimes whole companies—transform and transform operations through predictive solutions.
 
 Second, there’s my dive into quantitative trading. At UBS, I work in non-financial risk modeling, and I’ve recently started to explore quant modeling, especially high-frequency trading. In my free time, I experiment with investment strategies.
 

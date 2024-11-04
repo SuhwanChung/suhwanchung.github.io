@@ -130,5 +130,5 @@ By incorporating the winning models into our geographic visualizations, we were 
 
 <iframe src="{{ '/assets/img/portfolio/Housing/map.html' | relative_url }}" width="100%" height="600px" frameborder="0"></iframe>
 
-#### 
+#### Wrapup
 If you’re curious to learn more about our efforts from DataMeka and the thought process behind the competition design, here’s [a link to a live webinar](https://www.youtube.com/watch?v=rpW8Mlf86k0) to learn more about the house hacking competition.

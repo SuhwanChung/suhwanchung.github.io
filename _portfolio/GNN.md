@@ -71,14 +71,14 @@ Finally, DTW constructs a global cost matrix by which the algorithm finds the op
 #### 4-1. Dataset
 Our study is based on S&P 500 listed stocks for 5-year past prices ranging from 30-September 2016 to 30-September 2021. We drop off 15 stocks that have failed to meet the time steps requirements mainly due to newly listed stocks after year 2017. We obtain those stock series using Python YahooFinancials package and select adjusted close price as a daily stock price indicator.
 
-{% include aligner.html images="portfolio/GNN/S6.png"%}
+{% include aligner.html images="portfolio/GNN/S6.png width="80%" height="auto" %}
 
 #### 4-2. Experiment setting
 In this section, we compare our work to the original StemGNN algorithm and later perform an performance study to further check if our added components really had a role in the model improvement. We setup 3 settings to evaluate the improvement in performance: (1) First we run our baseline using the original StemGNN setup. (2) Next, we switched out the GRU module in latent correlation layer with a simple Transformer module. We also argue that the our temporal data might be relatively small for the number of stocks, and we hypothesize that training with a smaller subset might be beneficial for the performance. (3) Therefore, we perform a dynamic time warping clustering on our stocks, and given the cluster prior information, we will train on each cluster of stocks independently. In total we have clustered all our cohort series to 3 groups, we will provide the cluster analysis in the next section. All of our result will based on the metric MAPE, MAE and RMSE of the test set. Note that for our 3𝑟𝑑 setting, we compute the micro average of the individual stock result from each cluster for fair evaluation. From our dataset we split 70%, 20% and 10% of the samples as training set , validation set and testing set in chronological order, respectively. During the training phase, we train on the first 871 days and validate the performance with the next 249 days. The rest 10% of the data is regarded as test set and will be evaluated by the best performing model out of 5 runs. For our experiment, we use sliding window size as 12, forecasting step as 3 and batch size as 8. In our Transformer module, we have a linear layer with 16 hidden dimensions before performing positional encoding on the input. We set the hidden size of our 8-layers Transformer module as 8 and only utilize 1 head. We also have a linear layer to embed the Transformer output to the number of stocks. In addition, we normalize each time series with its mean and standard deviation as the input to our model.
 
 We show our experiments result in Table 1. We observe that our StemGNN with cluster information method performed the best for each metric with a large margin from the baseline. We dedicate the improvement to the use of stock behavior prior information. However, we recognize that the computation cost of clustering is subject to the size of the data and may not be as efficient to large scale data. In addition, we also observe slight improvement in the RMSE by replacing Transformer with GRU. We showed in Table 2 that training with Transformer also greatly reduce time per epoch and the number of learnable hyperparameters. We also demonstrate the prediction accuracy of some examples from Cluster 1 in Figure 7. We noticed that the model is able to predict accurately for stocks with stable trend or volatile trend for different range of price values within Cluster 1.
 
-{% include aligner.html images="portfolio/GNN/S7.png" width="90%" height="auto"%}
+{% include aligner.html images="portfolio/GNN/S7.png" width="80%" height="auto" %}
 
 
 #### 4-2. Hyperparameter Tuning
@@ -86,19 +86,19 @@ After we replaced the GRU module with a transformer, we took advantage of the hu
 
 4.3.1 Batch size. We tested our model on different batch sizes and the result was shown in Table 3. According to the result, mAPE were significantly reduced as we used a lower batch size than the original paper, and we believed this was caused by the difference between the dataset we used and the one used in the original work. Originally, the hyperparameters were used to train on the PeMS07 dataset [5], which consisted of freeway performance measurements from 228 sensors, and each had recorded the traffic data of 12673 time points. However, our stock data only had 1345 time points for each of the 492 stocks, which was about 10 times smaller than the original. Furthermore, unlike traffic data which was highly predictable due to the high correlation of its data between subsequent time steps, stock data was more unpredictable, as many external and unseen factor could affect the outcome of the next time step. Therefore, we believed the improvement from reducing the batch size could be reasoned in 2 ways. First, reducing the batch size caused the weights update to happen between a shorter interval of training data samples, so the weights were updated more rapidly under the same number of epochs, and the model was less likely to be underfitted when our smaller dataset was used.
 
-{% include aligner.html images="portfolio/GNN/S8.png" width="90%" height="auto"%}
+{% include aligner.html images="portfolio/GNN/S8.png" width="80%" height="auto"%}
 
 Second, as our dataset was inherently noisier than the original one, the training was more unstable as there existed more sharp local minima on the loss surface. As a large batch size tended to converge to sharp minimizer more easily as explained by [10], the model would not generalize well when tested on the test set even when it could achieve a low training loss, and reducing the batch size could mitigate the effect.
 
 4.3.2 Input size in Latent Correlation Layer. During our initial runs of experiment, we noticed that the mAPE on the validation set converged to values in a large range and did not decrease further during the training. For example, we recorded an mAPE above 80% and also below 50% at the end of the training using the exact setup.
 
-{% include aligner.html images="portfolio/GNN/S9.png" width="90%" height="auto"%}
+{% include aligner.html images="portfolio/GNN/S9.png" width="80%" height="auto"%}
 
 We further conducted experiments to visualize the correlation maps produced by the Latent Correlation Layer and the results were shown in Figure 6. High value lines were found in the correlation maps, indicating the model was using a few predictor stocks to predict all the other stocks. We hypothesized that there existed a few important stocks in our dataset that could represent other stocks well, therefore were selected by our model for stock price forecast. However, we further discovered the positions of the high value lines were different for all the correlation maps, showing that the predictor stocks vary between runs.
 
 We believed training instability occurred when the model chose a different set of predictor stocks each time, as its model performance could fluctuate depending on the quality of the stocks it chose, and only a number of stock sets could generalize well in the test set. Given the analysis, we proposed to further limit the number of most recent time steps the Latent Correlation Layer could see from 12 to 4 to minimize the influence of possible noise from the earlier time steps.
 
-{% include aligner.html images="portfolio/GNN/S10.png" width="90%" height="auto"%}
+{% include aligner.html images="portfolio/GNN/S10.png" width="80%" height="auto"%}
 
 The result was shown in Table 6. As expected, the variance of mAPE calculated over 5 runs was significantly reduced when only more recent time steps were fed to the layer. Although no obvious mAPE improvements were observed, we chose to stay with this setup as our model could produce consistent results between runs and it significantly reduced the runs for us to get a better model base on the validation result.
 
@@ -151,7 +151,3 @@ In this work we tackled the very challenging problem of Stock Price Prediction, 
 
 For more details, here's the full research paper:
 <iframe src="{{ '/assets/img/portfolio/GNN/gnn-paper.pdf' | relative_url }}" width="100%" height="600px"></iframe>
-
-<!-- Here is my research paper: [Download PDF](/assets/img/portfolio/GNN/gnn-stock-price-prediction-ntu.pdf) -->
-
-*This research is part of my PhD project at Nanyang Technological University. If you wish to cite this content, please follow standard conventions for citing website material.*

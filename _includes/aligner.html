@@ -8,12 +8,11 @@
 
 <figure class="row">
   {% for image in images %}
-    <div class="column" style="width: {{ column | default: '100%' }}%;">
+    <div class="column" style="flex-basis: {{ column | default: '100%' }}%;">
       <img {% if images.size == 1 %}class="single" {% endif %}
            src="{{ image | prepend: 'assets/img/' | relative_url }}"
            alt="{{ image | prepend: '/' | split: '/' | last }}"
-           width="{{ include.width | default: '100%' }}"
-           height="{{ include.height | default: 'auto' }}">
+           style="width: {{ include.width | default: '100%' }}; height: {{ include.height | default: 'auto' }};">
     </div>
   {% endfor %}
   {% if include.caption %}
@@ -22,6 +21,7 @@
 </figure>
 
 {% assign column = false %}
+
 
 <!-- {% assign images = include.images | split: ',' %}
 

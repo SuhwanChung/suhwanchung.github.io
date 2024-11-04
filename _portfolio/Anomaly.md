@@ -6,7 +6,7 @@ date: 2023-10-03
 ---
 
 {% include aligner.html images="portfolio/Anomaly/S0.png"%}
-:label: Independent research
+🏷️ PhD Research Project
 
 ### Listen: Can You Spot the Malfunction?
 Let’s start with a quick test. Below are three example sound clips from industrial machinery. One of these sounds is from a malfunctioning machine. Listen carefully and see if you can tell which one:
@@ -36,7 +36,8 @@ The goal of this small research was to reproduce the findings from a key study o
 
 The MIMII dataset is a collection of sound recordings from four types of industrial machines: valves, pumps, fans, and sliders. Each machine type is represented by datasets containing audio recordings of normal operations and four types of anomalies—contamination, leakage, rotating unbalance, and rail damage. 
 
-{% include aligner.html images="portfolio/Anomaly/S1.png"%}
+<!-- {% include aligner.html images="portfolio/Anomaly/S1.png"%} -->
+{% include aligner.html images="portfolio/Anomaly/S1.png" width="60%" height="auto" %}
 
 For interested readers:
 - *Original Paper Source: https://arxiv.org/pdf/1909.09347.pdf*

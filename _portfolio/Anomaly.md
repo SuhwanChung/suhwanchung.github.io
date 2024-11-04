@@ -29,7 +29,7 @@ Let’s start with a quick test. Below are three example sound clips from indust
   Your browser does not support the audio element.
 </audio>
 
-Think you know which one is malfunctioning? Keep this in mind as we explore how sound data can be used to detect anomalies in factory settings.
+Think you know which one is malfunctioning? The second sound clip is from a malfunctioning piece of machinery. In this post, we'll explore how sound data can be used to detect anomalies in factory settings.
 
 ### Research Purpose
 The goal of this small research was to reproduce the findings from a key study on anomaly detection in industrial machinery using sound data. Leveraging the MIMII Dataset, this research goal is to validate the effectiveness of using audio-based monitoring as a cost-effective and efficient method for detecting malfunctioning machinery in industrial environments.
@@ -37,7 +37,7 @@ The goal of this small research was to reproduce the findings from a key study o
 The MIMII dataset is a collection of sound recordings from four types of industrial machines: valves, pumps, fans, and sliders. Each machine type is represented by datasets containing audio recordings of normal operations and four types of anomalies—contamination, leakage, rotating unbalance, and rail damage. 
 
 <!-- {% include aligner.html images="portfolio/Anomaly/S1.png"%} -->
-{% include aligner.html images="portfolio/Anomaly/S1.png" width="60%" height="auto" %}
+{% include aligner.html images="portfolio/Anomaly/S1.png" width="50%" height="auto" %}
 
 For interested readers:
 - [Original Paper Source](https://arxiv.org/pdf/1909.09347.pdf)

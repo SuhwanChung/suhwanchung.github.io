@@ -50,12 +50,8 @@ Both operations are in the Spe-Seq Cell, which is responsible to learn the intra
 #### 3-2. Transformers for Intra-Series Representation Learning
 Transformer architecture [15] has established a new state-of-the-art in a variety of NLP tasks [8, 20]. The success of this architecture is largely due to the self-attention mechanism. The output of a Transformer layer is a deeply-contextualized version of the input. In NLP, for example, it can capture the different meanings that a word can have in different contexts. In the latent correlation layer of the StemGNN architecture, a GRU is used to learn the aggregated information of each series individually, with respect to time, and cross-attention is successively used to learn interactions and correlations between different features. Although Recurrent Neural Networks, and GRUs, have demonstrated the ability to represent the time evolving nature of a series, respecting the input ordering, they fail to contextualize the input, which can be achieved only by means of attention [2]. We decide to leverage attention mechanism also for the time-evolving representation of each series: we argue, in fact, that a better representation can help to subsequently compute the similarity among features. Learnable positional encodings are used to preserve the ordering, due to the non-recurrent nature of Transformers. A comprehensive picture of our enhanced latent correlation layer is displayed in Figure 3.
 
-<!-- {% include aligner.html images="portfolio/GNN/S3.png" caption="Figure 3: Our Transformer module adapted into Latent Correlation
-Layer." %} -->
-
-<img src="{{ 'assets/img/portfolio/GNN/S3.png' | relative_url }}" style="width: 70%; height: auto;" alt="Figure 3: Our Transformer module adapted into Latent Correlation
-Layer.">
-
+{% include aligner.html images="portfolio/GNN/S3.png" width="90%" height="auto" caption=""Figure 3: Our Transformer module adapted into Latent Correlation
+Layer."%}
 
 #### 3-3. Dynamic Time Wraping
 In this paper we focus on a topic of cross-series training through the implementation of StemGNN networks in which self-attention mechanism is used as a correlation layer within the networks to group correlated series of stocks. Here, we added an additional clustering layer to obtain prior knowledge on the subgroups of stock series and pass those individual grouped series through correlation layer of StemGNN to evaluate whether the prior knowledge on the subgroups contributes to accuracy improvement. To this end, we construct the additional clustering layer using Dynamic Time Warping (DTW) algorithm which finds the alignments between a pair of time series.
@@ -71,9 +67,6 @@ Finally, DTW constructs a global cost matrix by which the algorithm finds the op
 
 {% include aligner.html images="portfolio/GNN/S4.png" caption="Figure 4: DTW Similarity matrix with a dendrogram imposed" %}
 
-<!-- {% include aligner.html images="portfolio/GNN/S5.png" caption="Table 1: Results of the experiments on test set" %} -->
-<img src="{{ 'assets/img/portfolio/GNN/S5.png' | relative_url }}" style="width: 50%; height: auto;" alt="Table 1: Results of the experiments on test set">
-
 ## 4. Experiment
 #### 4-1. Dataset
 Our study is based on S&P 500 listed stocks for 5-year past prices ranging from 30-September 2016 to 30-September 2021. We drop off 15 stocks that have failed to meet the time steps requirements mainly due to newly listed stocks after year 2017. We obtain those stock series using Python YahooFinancials package and select adjusted close price as a daily stock price indicator.
@@ -85,8 +78,7 @@ In this section, we compare our work to the original StemGNN algorithm and later
 
 We show our experiments result in Table 1. We observe that our StemGNN with cluster information method performed the best for each metric with a large margin from the baseline. We dedicate the improvement to the use of stock behavior prior information. However, we recognize that the computation cost of clustering is subject to the size of the data and may not be as efficient to large scale data. In addition, we also observe slight improvement in the RMSE by replacing Transformer with GRU. We showed in Table 2 that training with Transformer also greatly reduce time per epoch and the number of learnable hyperparameters. We also demonstrate the prediction accuracy of some examples from Cluster 1 in Figure 7. We noticed that the model is able to predict accurately for stocks with stable trend or volatile trend for different range of price values within Cluster 1.
 
-<!-- {% include aligner.html images="portfolio/GNN/S7.png"%} -->
-<img src="{{ 'assets/img/portfolio/GNN/S7.png' | relative_url }}" style="width: 50%; height: auto;" alt="">
+{% include aligner.html images="portfolio/GNN/S7.png" width="90%" height="auto"%}
 
 
 #### 4-2. Hyperparameter Tuning
@@ -94,30 +86,26 @@ After we replaced the GRU module with a transformer, we took advantage of the hu
 
 4.3.1 Batch size. We tested our model on different batch sizes and the result was shown in Table 3. According to the result, mAPE were significantly reduced as we used a lower batch size than the original paper, and we believed this was caused by the difference between the dataset we used and the one used in the original work. Originally, the hyperparameters were used to train on the PeMS07 dataset [5], which consisted of freeway performance measurements from 228 sensors, and each had recorded the traffic data of 12673 time points. However, our stock data only had 1345 time points for each of the 492 stocks, which was about 10 times smaller than the original. Furthermore, unlike traffic data which was highly predictable due to the high correlation of its data between subsequent time steps, stock data was more unpredictable, as many external and unseen factor could affect the outcome of the next time step. Therefore, we believed the improvement from reducing the batch size could be reasoned in 2 ways. First, reducing the batch size caused the weights update to happen between a shorter interval of training data samples, so the weights were updated more rapidly under the same number of epochs, and the model was less likely to be underfitted when our smaller dataset was used.
 
-<!-- {% include aligner.html images="portfolio/GNN/S8.png"%} -->
-<img src="{{ 'assets/img/portfolio/GNN/S8.png' | relative_url }}" style="width: 50%; height: auto;" alt="">
+{% include aligner.html images="portfolio/GNN/S8.png" width="90%" height="auto"%}
 
 Second, as our dataset was inherently noisier than the original one, the training was more unstable as there existed more sharp local minima on the loss surface. As a large batch size tended to converge to sharp minimizer more easily as explained by [10], the model would not generalize well when tested on the test set even when it could achieve a low training loss, and reducing the batch size could mitigate the effect.
 
 4.3.2 Input size in Latent Correlation Layer. During our initial runs of experiment, we noticed that the mAPE on the validation set converged to values in a large range and did not decrease further during the training. For example, we recorded an mAPE above 80% and also below 50% at the end of the training using the exact setup.
 
-<!-- {% include aligner.html images="portfolio/GNN/S9.png"%} -->
-<img src="{{ 'assets/img/portfolio/GNN/S9.png' | relative_url }}" style="width: 50%; height: auto;" alt="">
+{% include aligner.html images="portfolio/GNN/S9.png" width="90%" height="auto"%}
 
 We further conducted experiments to visualize the correlation maps produced by the Latent Correlation Layer and the results were shown in Figure 6. High value lines were found in the correlation maps, indicating the model was using a few predictor stocks to predict all the other stocks. We hypothesized that there existed a few important stocks in our dataset that could represent other stocks well, therefore were selected by our model for stock price forecast. However, we further discovered the positions of the high value lines were different for all the correlation maps, showing that the predictor stocks vary between runs.
 
 We believed training instability occurred when the model chose a different set of predictor stocks each time, as its model performance could fluctuate depending on the quality of the stocks it chose, and only a number of stock sets could generalize well in the test set. Given the analysis, we proposed to further limit the number of most recent time steps the Latent Correlation Layer could see from 12 to 4 to minimize the influence of possible noise from the earlier time steps.
 
-<!-- {% include aligner.html images="portfolio/GNN/S10.png"%} -->
-<img src="{{ 'assets/img/portfolio/GNN/S10.png' | relative_url }}" style="width: 50%; height: auto;" alt="">
+{% include aligner.html images="portfolio/GNN/S10.png" width="90%" height="auto"%}
 
 The result was shown in Table 6. As expected, the variance of mAPE calculated over 5 runs was significantly reduced when only more recent time steps were fed to the layer. Although no obvious mAPE improvements were observed, we chose to stay with this setup as our model could produce consistent results between runs and it significantly reduced the runs for us to get a better model base on the validation result.
 
 #### 4-2. Performance Analysis
 To investigate performance of our proposing StemGNN networks which are modified with Dynamic Time Warping and Transformer layers, we analyze performance on test data across each of the clusters as shown in Table 5. From our investigation, we observe the significant decrease of MAE and RMSE in Cluster=1 which has 39 stock series. Specifically, RMSE for the Cluster=1 is reduced 4 times against the Cluster=3 whose RMSE is the highest with 3.33.
 
-<!-- {% include aligner.html images="portfolio/GNN/S11.png"%} -->
-<img src="{{ 'assets/img/portfolio/GNN/S11.png' | relative_url }}" style="width: 50%; height: auto;" alt="">
+{% include aligner.html images="portfolio/GNN/S11.png" width="90%" height="auto"%}
 
 We conduct additional analysis to investigate significant error reductions in Cluster=1 by our proposing networks compared to the other groups. To this end, we calculate a monthly price volatility for individual stock series and compute the intra-cluster volatility by using average. The monthly price volatility of stock series is obtained with standard deviation (𝜎) of a sequence of stock prices for time horizons 𝑇 where 𝑇 is 252/12 = 21 trading days.
 
@@ -136,28 +124,28 @@ In this work we tackled the very challenging problem of Stock Price Prediction, 
 <details>
     <summary>References</summary>
 
-    - [1] 2018. Spatio-Temporal Graph Convolutional Networks: A Deep Learning Framework for Traffic Forecasting. Proceedings of the Twenty-Seventh International Joint Conference on Artificial Intelligence (Jul 2018). https://doi.org/10.24963/ijcai. 2018/505
-    - [2] Dzmitry Bahdanau, Kyunghyun Cho, and Yoshua Bengio. 2015. Neural Machine Translation by Jointly Learning to Align and Translate. CoRR abs/1409.0473 (2015).
-    - [3] Joan Bruna, Wojciech Zaremba, Arthur Szlam, and Yann LeCun. 2014. Spectral Networks and Locally Connected Networks on Graphs. arXiv:1312.6203 [cs.LG]
-    - [4] Defu Cao, Yujing Wang, Juanyong Duan, Ce Zhang, Xia Zhu, Congrui Huang, Yunhai Tong, Bixiong Xu, Jing Bai, Jie Tong, and Qi Zhang. 2021. Spectral Temporal Graph Neural Network for Multivariate Time-series Forecasting. CoRRabs/2103.07719 (2021). arXiv:2103.07719 https://arxiv.org/abs/2103.07719
-    - [5] Chao Chen, Karl Petty, Alexander Skabardonis, Pravin Varaiya, and Zhanfeng Jia. 2001. Freeway performance measurement system: mining loop detector data. Transportation Research Record 1748, 1 (2001), 96–102.
-    - [6] Thomas G. Fischer and Christopher Krauss. 2018. Deep learning with long shortterm memory networks for financial market predictions. Eur. J. Oper. Res. 270 (2018), 654–669.
-    - [7] Sepp Hochreiter and Jürgen Schmidhuber. 1997. Long Short-term Memory. Neural computation 9 (12 1997), 1735–80. https://doi.org/10.1162/neco.1997.9.8.1735
-    - [8] Junjie Hu, Sebastian Ruder, Aditya Siddhant, Graham Neubig, Orhan Firat, and Melvin Johnson. 2020. XTREME: A Massively Multilingual Multi-task Benchmark for Evaluating Cross-lingual Generalization. CoRR abs/2003.11080 (2020). arXiv:2003.11080 https://arxiv.org/abs/2003.11080
-    - [9] Huseyin Ince and Theodore Trafalis. 2008. Trafalis, T.: Short Term Forecasting with Support Vector Machines and Application to Stock Price Prediction. International Journal of General Systems 37(6), 677-687. International Journal of General Systems – INT J GEN SYSTEM 37 (12 2008), 677–687. https:
-    //doi.org/10.1080/03081070601068595
-    - [10] Nitish Shirish Keskar, Dheevatsa Mudigere, Jorge Nocedal, Mikhail Smelyanskiy, and Ping Tak Peter Tang. 2016. On large-batch training for deep learning: Generalization gap and sharp minima. arXiv preprint arXiv:1609.04836 (2016).
-    - [11] Seulbi Lee, Jaehoon Kim, Jongyeon Hwang, EunJi Lee, Kyoung-Jin Lee, Jeongkyu Oh, Jungsu Park, and Tae-Young Heo. 2020. Clustering of Time Series Water Quality Data Using Dynamic Time Warping: A Case Study from the Bukhan River Water Quality Monitoring Network. Water 12, 9 (2020), 2411.
-    - [12] Shuanglong Liu, Chao Zhang, and Jinwen Ma. 2017. CNN-LSTM Neural Network Model for Quantitative Strategy Analysis in Stock Markets. 198–206. https://doi.org/10.1007/978-3-319-70096-0_21
-    - [13] Carolyn Reinhart. 2020. The normalized distance Laplacian. arXiv:1903.04575 [math.CO]
-    - [14] David I Shuman, Pierre Vandergheynst, and Pascal Frossard. 2011. Chebyshev polynomial approximation for distributed signal processing. 2011 International Conference on Distributed Computing in Sensor Systems and Workshops (DCOSS) (Jun 2011). https://doi.org/10.1109/dcoss.2011.5982158
-    - [15] Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, and Illia Polosukhin. 2017. Attention Is All You Need. CoRR abs/1706.03762 (2017). arXiv:1706.03762 http://arxiv.org/abs/1706.03762
-    - [16] Xiaohua Wang, P.K.H. Phua, and Weidong Lin. 2003. Stock market prediction using neural networks: Does trading volume help in short-term prediction?. In Proceedings of the International Joint Conference on Neural Networks, 2003., Vol. 4. 2438–2442 vol.4. https://doi.org/10.1109/IJCNN.2003.1223946
-    - [17] Sijie Yan, Yuanjun Xiong, and Dahua Lin. 2018. Spatial Temporal Graph Convolutional Networks for Skeleton-Based Action Recognition. arXiv:1801.07455 [cs.CV]
-    - [18] George Zerveas, Srideepika Jayaraman, Dhaval Patel, Anuradha Bhamidipaty, and Carsten Eickhoff. 2020. A Transformer-based Framework for Multivariate Time Series Representation Learning. CoRR abs/2010.02803 (2020). arXiv:2010.02803https://arxiv.org/abs/2010.02803
-    - [19] Chuxu Zhang, Dongjin Song, Yuncong Chen, Xinyang Feng, Cristian Lumezanu, Wei Cheng, Jingchao Ni, Bo Zong, Haifeng Chen, and Nitesh V Chawla. 2019. A deep neural network for unsupervised anomaly detection and diagnosis in multivariate time series data. In Proceedings of the AAAI Conference on Artificial Intelligence, Vol. 33. 1409–1416.
-    - [20] Zhuosheng Zhang, Yuwei Wu, Hai Zhao, Zuchao Li, Shuailiang Zhang, Xi Zhou, and Xiang Zhou. 2019. Semantics-aware BERT for Language Understanding. CoRR abs/1909.02209 (2019). arXiv:1909.02209 http://arxiv.org/abs/1909.02209
-    - [21] Xiaodan Zhu, Anh Ninh, Hui Zhao, and Zhenming Liu. 2021. Demand Forecasting with Supply-Chain Information and machine learning: Evidence in the Pharmaceutical Industry. Production and Operations Management (2021).
+- [1] 2018. Spatio-Temporal Graph Convolutional Networks: A Deep Learning Framework for Traffic Forecasting. Proceedings of the Twenty-Seventh International Joint Conference on Artificial Intelligence (Jul 2018). https://doi.org/10.24963/ijcai. 2018/505
+- [2] Dzmitry Bahdanau, Kyunghyun Cho, and Yoshua Bengio. 2015. Neural Machine Translation by Jointly Learning to Align and Translate. CoRR abs/1409.0473 (2015).
+- [3] Joan Bruna, Wojciech Zaremba, Arthur Szlam, and Yann LeCun. 2014. Spectral Networks and Locally Connected Networks on Graphs. arXiv:1312.6203 [cs.LG]
+- [4] Defu Cao, Yujing Wang, Juanyong Duan, Ce Zhang, Xia Zhu, Congrui Huang, Yunhai Tong, Bixiong Xu, Jing Bai, Jie Tong, and Qi Zhang. 2021. Spectral Temporal Graph Neural Network for Multivariate Time-series Forecasting. CoRRabs/2103.07719 (2021). arXiv:2103.07719 https://arxiv.org/abs/2103.07719
+- [5] Chao Chen, Karl Petty, Alexander Skabardonis, Pravin Varaiya, and Zhanfeng Jia. 2001. Freeway performance measurement system: mining loop detector data. Transportation Research Record 1748, 1 (2001), 96–102.
+- [6] Thomas G. Fischer and Christopher Krauss. 2018. Deep learning with long shortterm memory networks for financial market predictions. Eur. J. Oper. Res. 270 (2018), 654–669.
+- [7] Sepp Hochreiter and Jürgen Schmidhuber. 1997. Long Short-term Memory. Neural computation 9 (12 1997), 1735–80. https://doi.org/10.1162/neco.1997.9.8.1735
+- [8] Junjie Hu, Sebastian Ruder, Aditya Siddhant, Graham Neubig, Orhan Firat, and Melvin Johnson. 2020. XTREME: A Massively Multilingual Multi-task Benchmark for Evaluating Cross-lingual Generalization. CoRR abs/2003.11080 (2020). arXiv:2003.11080 https://arxiv.org/abs/2003.11080
+- [9] Huseyin Ince and Theodore Trafalis. 2008. Trafalis, T.: Short Term Forecasting with Support Vector Machines and Application to Stock Price Prediction. International Journal of General Systems 37(6), 677-687. International Journal of General Systems – INT J GEN SYSTEM 37 (12 2008), 677–687. https:
+//doi.org/10.1080/03081070601068595
+- [10] Nitish Shirish Keskar, Dheevatsa Mudigere, Jorge Nocedal, Mikhail Smelyanskiy, and Ping Tak Peter Tang. 2016. On large-batch training for deep learning: Generalization gap and sharp minima. arXiv preprint arXiv:1609.04836 (2016).
+- [11] Seulbi Lee, Jaehoon Kim, Jongyeon Hwang, EunJi Lee, Kyoung-Jin Lee, Jeongkyu Oh, Jungsu Park, and Tae-Young Heo. 2020. Clustering of Time Series Water Quality Data Using Dynamic Time Warping: A Case Study from the Bukhan River Water Quality Monitoring Network. Water 12, 9 (2020), 2411.
+- [12] Shuanglong Liu, Chao Zhang, and Jinwen Ma. 2017. CNN-LSTM Neural Network Model for Quantitative Strategy Analysis in Stock Markets. 198–206. https://doi.org/10.1007/978-3-319-70096-0_21
+- [13] Carolyn Reinhart. 2020. The normalized distance Laplacian. arXiv:1903.04575 [math.CO]
+- [14] David I Shuman, Pierre Vandergheynst, and Pascal Frossard. 2011. Chebyshev polynomial approximation for distributed signal processing. 2011 International Conference on Distributed Computing in Sensor Systems and Workshops (DCOSS) (Jun 2011). https://doi.org/10.1109/dcoss.2011.5982158
+- [15] Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, and Illia Polosukhin. 2017. Attention Is All You Need. CoRR abs/1706.03762 (2017). arXiv:1706.03762 http://arxiv.org/abs/1706.03762
+- [16] Xiaohua Wang, P.K.H. Phua, and Weidong Lin. 2003. Stock market prediction using neural networks: Does trading volume help in short-term prediction?. In Proceedings of the International Joint Conference on Neural Networks, 2003., Vol. 4. 2438–2442 vol.4. https://doi.org/10.1109/IJCNN.2003.1223946
+- [17] Sijie Yan, Yuanjun Xiong, and Dahua Lin. 2018. Spatial Temporal Graph Convolutional Networks for Skeleton-Based Action Recognition. arXiv:1801.07455 [cs.CV]
+- [18] George Zerveas, Srideepika Jayaraman, Dhaval Patel, Anuradha Bhamidipaty, and Carsten Eickhoff. 2020. A Transformer-based Framework for Multivariate Time Series Representation Learning. CoRR abs/2010.02803 (2020). arXiv:2010.02803https://arxiv.org/abs/2010.02803
+- [19] Chuxu Zhang, Dongjin Song, Yuncong Chen, Xinyang Feng, Cristian Lumezanu, Wei Cheng, Jingchao Ni, Bo Zong, Haifeng Chen, and Nitesh V Chawla. 2019. A deep neural network for unsupervised anomaly detection and diagnosis in multivariate time series data. In Proceedings of the AAAI Conference on Artificial Intelligence, Vol. 33. 1409–1416.
+- [20] Zhuosheng Zhang, Yuwei Wu, Hai Zhao, Zuchao Li, Shuailiang Zhang, Xi Zhou, and Xiang Zhou. 2019. Semantics-aware BERT for Language Understanding. CoRR abs/1909.02209 (2019). arXiv:1909.02209 http://arxiv.org/abs/1909.02209
+- [21] Xiaodan Zhu, Anh Ninh, Hui Zhao, and Zhenming Liu. 2021. Demand Forecasting with Supply-Chain Information and machine learning: Evidence in the Pharmaceutical Industry. Production and Operations Management (2021).
 </details>
 
 For more details, here's the full research paper:

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Anomaly Detection in Industrial Machinery Using Sound Data
-img: "assets/img/portfolio/S0.png"
+img: "assets/img/portfolio/Anomaly/S0.png"
 date: 2023-10-03
 ---
 

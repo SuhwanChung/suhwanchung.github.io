@@ -3,7 +3,7 @@ layout: post
 title: Deep learning optimization requires this essential knowledge
 feature-img: "assets/img/posts/aiml-optimization/S0.png"
 #thumbnail: "assets/img/posts/aiml-optimization/S0.png"
-tags: AI/AML
+tags: AI/ML
 categories: PhD Study Note
 ---
 

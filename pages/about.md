@@ -6,18 +6,16 @@ feature-img: "assets/img/header/header_feature_image.jpg"
 tags: [Page]
 ---
 
-Howdy! I'm Suhwan, Welcome to my blog!
+Hi, I’m Suhwan, and I’m glad you’re here!
 
-So, who am I? Well, I like to say my life revolves around a “triangular” approach, both personally and professionally. Yep, triangles—three strong points that define who I am. You’ll even see this theme reflected in my website's logo.
+In my work, I’m focused on building predictive forecasting and risk management models that go beyond theory. I have extensive experience of developing, deploying, and operationalizing these models through business process integration.
 
-First, there's my experience in AI and machine learning. Over the past eight years, I’ve been working with predicive analytics at large organizations. My mission? To help teams—and sometimes whole companies—transform and transform operations through predictive solutions.
+Right now, I’m working in the banking sector, where I develop and manage transaction monitoring models for Anti-Money Laundering compliance. Before this, I spent three years leading a machine learning research project at a major medical technology company, where we developed machine learning models for supply chain demand forecasting. That experience not only transformed how we approached demand predictions, but also set the foundation for my Ph.D. research in large-scale time series forecasting.
 
-Second, there’s my dive into quantitative trading. At UBS, I work in non-financial risk modeling, and I’ve recently started to explore quant modeling, especially high-frequency trading. In my free time, I experiment with investment strategies.
+While pursuing my Ph.D., I founded DataMeka here in Singapore, a machine learning playground to host machine learning competitions focused on regional topics across Southeast Asia. Through partnerships with leading universities in Singapore, Malaysia, and Vietnam, we’ve ended up runnnig five major competitions, live webinars, machine learning bootcamps during the past two years. 
 
-And third, my love for investment rounds out the triangle. AI/ML, quant modeling, and investing are the pillars of my work, and you’ll find insights, projects, and stories about them as you explore my site.
+On the personal side, my family means the world to me. My amazing wife and our two wonderful children are my biggest supporters and constant source of motivation.
 
-My academic path also fits the triangular theme. I earned a Bachelor’s in Business from Dankook University, followed by a Master’s in Data Science from the National University of Singapore, and then a PhD in Machine Learning from Nanyang Technological University. Three schools, three degrees (although leaving PhD without completing disseration), and my commitment to learning.
-
-On the personal side, I’m all about my family. My incredible wife, our smart daughter, and our handsome son keep life fulfilling. They’re my biggest supporters and constant sources of inspiration.
+Thanks for stopping by – I hope you find something here that inspires you!
 
 {% include aligner.html images="aboutMe.jpeg"%}

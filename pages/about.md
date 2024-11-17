@@ -6,16 +6,18 @@ feature-img: "assets/img/header/header_feature_image.jpg"
 tags: [Page]
 ---
 
-Hi, I’m Suhwan, and I’m glad you’re here!
+Thanks for stopping by ! I’m Suhwan—glad you’re here!
 
-In my work, I’m focused on building predictive forecasting and risk management models that go beyond theory. I have extensive experience of developing, deploying, and operationalizing these models through business process integration.
+I’m passionate about creating machine learning models and integrating them into business processes to drive impact. Over my career, I’ve developed data-driven solutions that transformed both the bottom line and top line growth.
 
-Right now, I’m working in the banking sector, where I develop and manage transaction monitoring models for Anti-Money Laundering compliance. Before this, I spent three years leading a machine learning research project at a major medical technology company, where we developed machine learning models for supply chain demand forecasting. That experience not only transformed how we approached demand predictions, but also set the foundation for my Ph.D. research in large-scale time series forecasting.
+For the **bottom line**, I led a 3-year project in manufacturing that transformed supply chain demand forecasting. By leveraging machine learning and external demand-sensing signals, we improved accuracy by 10-15% across 1,200 SKUs, automating forecasting workflows and retiring traditional manual planning practices.
 
-While pursuing my Ph.D., I founded DataMeka here in Singapore, a machine learning playground to host machine learning competitions focused on regional topics across Southeast Asia. Through partnerships with leading universities in Singapore, Malaysia, and Vietnam, we’ve ended up runnnig five major competitions, live webinars, machine learning bootcamps during the past two years. 
+On the **top line**, I designed portfolio growth evaluation models for medical technology products, mapping market share against theoretical potential. These insights were integrated into annual marketing plans, it replaced guesswork by supporting data-driven market landscape.
 
-On the personal side, my family means the world to me. My amazing wife and our two wonderful children are my biggest supporters and constant source of motivation.
+Now, in the banking sector, I focus on transaction monitoring models for anti-money laundering (AML) compliance. I developed a programmatic, three-step model calibration framework to improve risk coverage and reduce false positives by 5% - which balances operational efficiency and maintaining risk coverage.
 
-Thanks for stopping by – I hope you find something here that inspires you!
+While working full-time throughout my professional career, I pursued a Master of Science and PhD studies in computer science, focusing on time series modeling and its applications to forecasting use cases.
+
+This blog is where I share projects and ideas — whenever inspiration strikes. Outside of work, my family—my amazing wife and two wonderful kids—keeps me grounded and motivated.
 
 {% include aligner.html images="aboutMe.jpeg"%}

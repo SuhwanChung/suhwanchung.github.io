@@ -18,6 +18,6 @@ Now, in the banking sector, I focus on transaction monitoring models for anti-mo
 
 While working full-time throughout my professional career, I pursued a Master of Science and PhD studies in computer science, focusing on time series modeling and its applications to forecasting use cases.
 
-This blog is where I share projects and ideas — whenever inspiration strikes. Outside of work, my family—my amazing wife and two wonderful kids—keeps me grounded and motivated.✨
+Outside of work, my family—my amazing wife and two wonderful kids—keeps me grounded and motivated here in Singapore. ✨
 
 {% include aligner.html images="aboutMe.jpeg"%}

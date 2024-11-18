@@ -8,7 +8,7 @@ tags: [Page]
 
 Thanks for stopping by ! I’m Suhwan—glad you’re here!
 
-I’m passionate about creating **machine learning models and integrating them into business processes to drive impact**. Over my career, I’ve developed data-driven solutions that transformed both the bottom line and top line growth.
+I’m passionate about creating models & methodologies and integrating them into business processes to drive impact. Throughout my career, I’ve developed data-driven solutions that transformed both the bottom line and top line growth.
 
 For the bottom line, during COVID-19, I led a 3-year project in medical device manufacturer that **transformed supply chain demand forecasting**. By leveraging machine learning and external demand-sensing signals, we improved accuracy by 10-15% across 1,200 SKUs, automated forecasting workflows, and retired traditional manual planning - proud to have contributed to the delivery of essential medical products to hospitals treating COVID-19 patients.
 

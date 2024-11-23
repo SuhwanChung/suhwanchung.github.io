@@ -8,7 +8,7 @@ tags: [Page]
 
 Thanks for stopping by !
 
-I’m passionate about Data and AI to champion transformation initiatives and drive measurable business process improvements. Over the course of my career, I've d3elivered data-driven solutions that transformed both bottom-line efficiency and top-line growth at large organizations. 
+I’m passionate about Data and AI to champion transformation initiatives and drive measurable business process improvements. Over the course of my career, I've delivered data-driven solutions that transformed both bottom-line efficiency and top-line growth at large organizations. 
 
 For the **bottom line**, during the challenges of COVID-19, I led a **3-year transformation project** at a global medical device manufacturer. By deploying **machine learning** and external **demand-sensing signals**, we improved demand forecasting accuracy by **10–15% across 1,200 SKUs**. This automated traditional manual planning processes and ensured timely delivery of essential medical products to hospitals during the pandemic, a project I’m deeply proud of.
 

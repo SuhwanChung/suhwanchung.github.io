@@ -1,7 +1,7 @@
 ---
 layout: post
 title: DeepFashion Attributes Prediction using ResNet
-img: "assets/img/portfolio/DeepFashion/S0.png"
+img: "assets/img/portfolio/DeepFashion/Thumbnail.png"
 date: 2021-11-02
 tags: AI/ML
 ---

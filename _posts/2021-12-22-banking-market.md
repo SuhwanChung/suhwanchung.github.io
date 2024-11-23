@@ -3,7 +3,7 @@ layout: post
 title: Will the Stock Market Go Up or Crash in 2022?
 feature-img: "assets/img/posts/invest-market22/S0.png"
 #thumbnail: "assets/img/posts/invest-market22/S0.png"
-tags: Investment
+tags: Blog
 categories: Investment
 ---
 

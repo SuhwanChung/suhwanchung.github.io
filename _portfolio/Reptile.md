@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Constructing scalable meta learning for time series forecasting using Reptile algorithms
-img: "assets/img/portfolio/Reptile/S0.png"
+img: "assets/img/portfolio/Reptile/Thumbnail.png"
 date: 2024-03-25
 tags: AI/ML
 ---

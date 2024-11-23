@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Embeddings Multiomics Data for Correlation Network Construction and Pathway Analysis
-img: "assets/img/portfolio/miRNA/S0.png"
+img: "assets/img/portfolio/miRNA/Thumbnail.png"
 date: 2021-05-10
 tags: AI/ML
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Spectral Graph Convolution Network for Stock Price Predictions 
-img: "assets/img/portfolio/GNN/S0.png"
+img: "assets/img/portfolio/GNN/Thumbnail.png"
 date: 2022-11-13
 tags: AI/ML
 ---

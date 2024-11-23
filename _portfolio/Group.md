@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Deep Embedded Clustering and Network Analysis to Compensate for Weak Predictors in Cross-Series Forecasting
-img: "assets/img/portfolio/Group/S0.png"
+img: "assets/img/portfolio/Group/Thumbnail.png"
 date: 2023-04-30
 tags: AI/ML
 ---

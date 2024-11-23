@@ -3,7 +3,7 @@ layout: post
 title: Information Theory- Quick refresh
 feature-img: "assets/img/posts/aiml-information/S0.png"
 thumbnail: "assets/img/posts/aiml-information/S0.png"
-tags: AI/ML
+tags: Blog
 categories: PhD Study Note
 ---
 

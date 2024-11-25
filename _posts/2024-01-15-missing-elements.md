@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Missing Element in Sucessful Transformation - Collaborative Analytics
+title: The Role of Collaborative Analytics in Commercial Transformation
 feature-img: "assets/img/posts/missing-elements/featured.png"
 thumbnail: "assets/img/posts/missing-elements/thumbnail.png"
 tags: Blog

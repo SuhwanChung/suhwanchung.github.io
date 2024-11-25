@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Missing ingredients in commercial strategy: Collaborative sales and marketing analytics
+title: Missing elements in the sucessful commercial transformation - Collaborative analytics
 feature-img: "assets/img/posts/missing-elements/featured.png"
 thumbnail: "assets/img/posts/missing-elements/thumbnail.png"
 tags: Blog

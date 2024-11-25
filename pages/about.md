@@ -8,12 +8,12 @@ tags: [Page]
 
 Thanks for stopping by !
 
-I’m passionate about Data and AI to champion transformation initiatives and drive measurable business process improvements. Over the course of my career, I've delivered data-driven solutions that transformed both bottom-line efficiency and top-line growth at large organizations. 
+I’m passionate about Data and Advanced Analytics to lead transformation initiatives and drive measurable business improvements. Over my career, I've delivered data-driven solutions that transformed both bottom-line efficiency and top-line growth at large organizations like Johnson & Johnson, General Electric, and Becton Dickinson.
 
-For the **bottom line**, during the challenges of COVID-19, I led a **3-year transformation project** at a global medical device manufacturer. By deploying **machine learning** and external **demand-sensing signals**, we improved demand forecasting accuracy by **10–15% across 1,200 SKUs**. This automated traditional manual planning processes and ensured timely delivery of essential medical products to hospitals during the pandemic, a project I’m deeply proud of.
+During COVID-19, I led a 3-year transformation project at a global medical device manufacturer, where we deployed machine learning to improve demand forecasting accuracy by 10–15% across essential medical products for COVID-19 treatments. This automated manual planning processes and ensured the timely delivery of essential medical products to hospitals—a project I’m truly proud of.
 
-On the **top line**, I designed **commercial excellence solution** by leveraging data and analytics to **find overlooked growth opportunities** for medical technology products. These solutions quantified market size, company share, and headroom for growth across different segments, incorporating parameters like Category CAGR, competitiveness, the company’s ability to win, and net contribution to the bottom line. By integrating these insights into the annual marketing planning process, we **reshaped market strategies with data-driven decisions** that drove business outcomes.
+On the top line, I designed commercial excellence solution by leveraging data and analytics to find overlooked growth opportunities. By quantifying market size, company share, and headroom for growth, and integrating these insights into annual marketing plans, we reshaped strategies with data-driven decisions that delivered measurable business outcomes.
 
-While working full-time throughout my professional career, I pursued **Master of Science and PhD studies** in data science, focusing on predictive forecasting models and its applications to business use cases. Outside of work, my family, my amazing wife and two wonderful kids, keeps me grounded and motivated here in Singapore. ✨
+While working full-time, I pursued advanced studies, Master of Science and PhD studies in data science. My focus was on pdictive forecasting models for demand forecasting. Outside of work, my family, my wife and two kids, keeps me grounded and motivated here in Singapore. ✨
 
 {% include aligner.html images="aboutMe.jpeg"%}
